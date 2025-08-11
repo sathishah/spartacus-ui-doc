@@ -1,0 +1,3223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website Structuring Using Spartacus in UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <style>
+    /* Global styles */
+    body { background: #fff; margin: 0; font-family: sans-serif; }
+    section.slide { min-height: 720px; width: 1280px; margin: 0 auto; position: relative; }
+    /* Disable animations for static presentation feel */
+    * { transition: none !important; animation: none !important; }
+  </style>
+</head>
+<body>
+<section class="slide" aria-label="Slide 1">
+<div class="w-[1280px] h-[720px] mx-auto relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-90"></div>
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551434678-e076c223a692')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-blue-800/70 to-transparent"></div>
+      <div class="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-blue-800/50 to-transparent"></div>
+    </div>
+    
+    <div class="absolute top-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-40 blur-md"></div>
+    <div class="absolute bottom-20 left-20 w-24 h-24 rounded-full bg-blue-500 opacity-40 blur-md"></div>
+    <div class="absolute top-1/3 left-1/4 w-16 h-16 rounded-full bg-blue-300 opacity-30 blur-sm"></div>
+    
+    <main class="relative z-10 p-14 flex flex-col h-full">
+      <div class="flex-grow flex flex-col justify-center items-center text-center">
+        <h1 class="text-[60px] font-extrabold mb-6 text-white drop-shadow-lg tracking-wide">
+          E-commerce Website Structuring
+          <span class="block text-[50px]">
+            Using Spartacus in UI
+          </span>
+        </h1>
+        <p class="text-2xl text-white font-light mb-12 max-w-2xl mx-auto drop-shadow-md">
+          A technical approach to modern e-commerce solutions
+        </p>
+        <div class="w-40 h-1 bg-white opacity-70 rounded-full mb-12"></div>
+      </div>
+      <div class="flex justify-end text-white">
+        <div class="text-right">
+          <p class="text-xl">Date : August 11, 2025 </p>
+          <p class="text-xl">Author : Sathish Anaji Hanumanthappa</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 2">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white overflow-hidden">
+   <!-- Background decoration elements -->
+   <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100 rounded-full -mr-20 -mt-20 opacity-50">
+   </div>
+   <div class="absolute bottom-0 left-0 w-80 h-80 bg-violet-100 rounded-full -ml-40 -mb-40 opacity-50">
+   </div>
+   <div class="absolute top-1/2 left-3/4 w-40 h-40 bg-slate-100 rounded-full opacity-60">
+   </div>
+   <main class="p-14 w-full h-full relative z-10">
+    <h1 class="text-[40px] font-bold mb-10 text-indigo-900 text-center">
+     Table of Contents
+    </h1>
+    <div class="max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-violet-200">
+     <ul class="space-y-6 text-[28px]">
+      <li class="flex items-center">
+       <span class="text-violet-500 mr-3">
+        <i class="fas fa-info-circle"></i>
+       </span>
+       <span class="text-indigo-900 font-semibold">
+        Introduction to Spartacus
+       </span>
+      </li>
+      <li class="flex items-center">
+       <span class="text-violet-500 mr-3">
+        <i class="fas fa-sitemap"></i>
+       </span>
+       <span class="text-indigo-900 font-semibold">
+        E-commerce Website Structure Basics
+       </span>
+      </li>
+      <li class="flex items-center">
+       <span class="text-violet-500 mr-3">
+        <i class="fas fa-check-circle"></i>
+       </span>
+       <span class="text-indigo-900 font-semibold">
+        Spartacus Implementation Best Practices
+       </span>
+      </li>
+      <li class="flex items-center">
+       <span class="text-violet-500 mr-3">
+        <i class="fas fa-user-cog"></i>
+       </span>
+       <span class="text-indigo-900 font-semibold">
+        Enhancing UX with Spartacus Features
+       </span>
+      </li>
+      <li class="flex items-center">
+       <span class="text-violet-500 mr-3">
+        <i class="fas fa-tachometer-alt"></i>
+       </span>
+       <span class="text-indigo-900 font-semibold">
+        Performance & SEO Considerations
+       </span>
+      </li>
+      <li class="flex items-center">
+       <span class="text-violet-500 mr-3">
+        <i class="fas fa-chart-line"></i>
+       </span>
+       <span class="text-indigo-900 font-semibold">
+        Future Trends & Conclusion
+       </span>
+      </li>
+     </ul>
+    </div>
+   </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 3">
+<div class="w-[1280px] h-[720px] mx-auto relative bg-gradient-to-b from-blue-600 to-blue-800">
+   <!-- Background layer -->
+   <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-blue-100 opacity-20">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-900 to-transparent">
+    </div>
+    <div class="absolute top-10 right-10">
+     <i class="fas fa-cogs text-blue-300 text-8xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-10 left-10">
+     <i class="fas fa-shopping-cart text-blue-400 text-6xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute top-1/3 left-10">
+     <i class="fas fa-code text-blue-500 text-7xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-1/4 right-20">
+     <i class="fas fa-desktop text-blue-400 text-6xl opacity-70">
+     </i>
+    </div>
+   </div>
+   <!-- Text layer -->
+   <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <h1 class="text-5xl font-bold text-white text-center mb-4 drop-shadow-lg">
+     Introduction to Spartacus
+    </h1>
+    <p class="text-2xl text-white text-center max-w-2xl drop-shadow-md">
+     Exploring the headless, Angular-based storefront for SAP Commerce Cloud
+    </p>
+    <div class="mt-8 flex gap-4 items-center">
+     <i class="fas fa-puzzle-piece text-white text-3xl animate-pulse">
+     </i>
+     <i class="fab fa-angular text-red-600 text-4xl">
+     </i>
+     <i class="fas fa-layer-group text-white text-3xl animate-pulse">
+     </i>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 4">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full">
+      <h1 class="text-[35px] font-bold mb-4 h-10 items-end text-gray-800">
+        What is Spartacus
+      </h1>
+      
+      <div class="definition-box p-4 mb-6">
+        <p class="text-gray-800 italic">Spartacus transforms SAP Commerce implementations by providing developer-friendly, upgradable storefront capabilities.</p>
+      </div>
+      
+      <div class="flex flex-col h-[calc(100%-100px)]">
+        <div class="flex space-x-8 h-1/2 mb-6">
+          <!-- Left Column -->
+          <div class="w-1/2">
+            <div class="flex items-start mb-4">
+              <i class="fas fa-cube text-2xl mr-3 text-blue-600 mt-1"></i>
+              <div>
+                <h2 class="text-xl font-bold text-blue-800 mb-2">A Modern Frontend Framework for SAP Commerce Cloud</h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-800">
+                  <li><span class="font-semibold">Modular JavaScript Library:</span> Built on Angular for e-commerce storefronts</li>
+                  <li><span class="font-semibold">Headless Architecture:</span> Decouples UI from backend SAP Commerce services</li>
+                  <li><span class="font-semibold">Version Compatibility:</span> Designed for SAP Commerce Cloud (v2+)</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-star text-2xl mr-3 text-blue-600 mt-1"></i>
+              <div>
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Enterprise Scalability Features</h2>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                    <span>Out-of-the-box B2C capabilities</span>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                    <span>Optimized performance</span>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                    <span>SmartEdit compatibility</span>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                    <span>SEO-friendly (SDO)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="w-1/2">
+            <div class="flex items-start h-full">
+              <i class="fas fa-chart-line text-2xl mr-3 text-blue-600 mt-1"></i>
+              <div class="w-full">
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Technical Maturity Assessment</h2>
+                <table class="w-full text-sm text-gray-800">
+                  <tr>
+                    <td class="py-1 font-semibold">Upgradability</td>
+                    <td class="py-1">
+                      <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 font-semibold">Extensibility</td>
+                    <td class="py-1">
+                      <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 font-semibold">PWA Support</td>
+                    <td class="py-1">
+                      <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="far fa-star text-yellow-400"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 font-semibold">Documentation</td>
+                    <td class="py-1">
+                      <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex space-x-8 h-1/2">
+          <!-- Bottom Left -->
+          <div class="w-1/3">
+            <div class="flex items-start h-full">
+              <i class="fas fa-gem text-2xl mr-3 text-blue-600 mt-1"></i>
+              <div>
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Core Advantages</h2>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="bg-blue-100 rounded-full w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                      <span class="text-blue-800 font-bold">1</span>
+                    </div>
+                    <p class="text-gray-800">Seamless feature/fix updates via npm packages</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-blue-100 rounded-full w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                      <span class="text-blue-800 font-bold">2</span>
+                    </div>
+                    <p class="text-gray-800">Customizable UI components with feature modularity</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-blue-100 rounded-full w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                      <span class="text-blue-800 font-bold">3</span>
+                    </div>
+                    <p class="text-gray-800">CMS-driven content management</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bottom Middle -->
+          <div class="w-1/3">
+            <div class="flex items-start h-full">
+              <i class="fas fa-rocket text-2xl mr-3 text-blue-600 mt-1"></i>
+              <div>
+                <h2 class="text-xl font-bold text-blue-800 mb-2">PWA Ready Features</h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-800">
+                  <li>Offline capabilities</li>
+                  <li>App-like experience</li>
+                  <li>Fast loading speeds</li>
+                  <li>Push notification support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bottom Right -->
+          <div class="w-1/3">
+            <div class="flex items-start h-full">
+              <i class="fas fa-shield-alt text-2xl mr-3 text-blue-600 mt-1"></i>
+              <div>
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Future-Proof Architecture</h2>
+                <div class="bg-gray-100 p-3 rounded">
+                  <div class="flex items-center mb-2">
+                    <i class="fas fa-sync-alt text-blue-600 mr-2"></i>
+                    <span class="font-semibold">Continuous Updates:</span>
+                  </div>
+                  <p class="text-sm">Through npmjs.org with backward-compatible versioning</p>
+                  
+                  <div class="flex items-center mt-3 mb-2">
+                    <i class="fas fa-code-branch text-blue-600 mr-2"></i>
+                    <span class="font-semibold">Angular Foundation:</span>
+                  </div>
+                  <p class="text-sm">Ensures long-term maintainability and community support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 5">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col">
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800">
+        Spartacus vs Traditional CMS
+      </h1>
+      
+      <!-- Annotation Box -->
+      <div class="relative z-0 border-l-4 border-blue-600 bg-blue-50 p-3 mb-3">
+        <p class="text-gray-700 text-base">
+          <i class="fas fa-info-circle text-blue-600 mr-2"></i>This slide contrasts the headless architecture of Spartacus with traditional, monolithic CMS platforms, highlighting key differences in architecture, flexibility, and performance.
+        </p>
+      </div>
+
+      <div class="flex-grow flex gap-x-3 mt-3">
+        <!-- Left Column: Comparison Table -->
+        <div class="w-3/5 flex flex-col">
+            <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-balance-scale-right mr-2 text-blue-800"></i>Key Differentiators</h2>
+            <div class="w-full relative z-0">
+                <table class="w-full text-left text-base text-gray-800">
+                    <thead class="text-sm text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th scope="col" class="px-4 py-3 w-1/4"><i class="fas fa-cogs mr-2"></i>Aspect</th>
+                            <th scope="col" class="px-4 py-3 w-2/5"><i class="fas fa-cloud mr-2 text-blue-600"></i>Spartacus (Headless)</th>
+                            <th scope="col" class="px-4 py-3 w-2/5"><i class="fas fa-server mr-2"></i>Traditional CMS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b">
+                            <td class="px-4 py-3 font-semibold">Architecture</td>
+                            <td class="px-4 py-3 text-blue-800">Decoupled frontend & backend (API-driven)</td>
+                            <td class="px-4 py-3">Tightly coupled monolithic system</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-4 py-3 font-semibold">Flexibility</td>
+                            <td class="px-4 py-3 text-blue-800">Customizable UI with modern frameworks (e.g., Angular)</td>
+                            <td class="px-4 py-3">Limited by pre-built templates</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-4 py-3 font-semibold">Performance</td>
+                            <td class="px-4 py-3 text-blue-800">Faster load times (JAMstack approach)</td>
+                            <td class="px-4 py-3">Slower due to server-side rendering</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-4 py-3 font-semibold">Scalability</td>
+                            <td class="px-4 py-3 text-blue-800">Easily scales with microservices</td>
+                            <td class="px-4 py-3">Requires full-stack upgrades</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-4 py-3 font-semibold">Innovation</td>
+                            <td class="px-4 py-3 text-blue-800">Rapid frontend updates without backend changes</td>
+                            <td class="px-4 py-3">Dependent on CMS vendor roadmap</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             <!-- Bottom Aligned Section -->
+            <div class="mt-auto">
+                <blockquote class="border-l-4 border-red-600 pl-4 py-2 mt-3 italic text-gray-600 text-base">
+                  Traditional CMS platforms (e.g., WordPress + WooCommerce) struggle with the dynamic demands and omnichannel expectations of modern e-commerce.
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Right Column: Why Spartacus & Chart -->
+        <div class="w-2/5 flex flex-col gap-y-3">
+          <!-- Why Spartacus Section -->
+          <div class="relative z-0">
+            <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-rocket mr-2 text-blue-800"></i>Why Spartacus?</h2>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-semibold text-gray-800"><i class="fas fa-shipping-fast mr-2 text-blue-600"></i>Agility</span>
+                  <span class="text-sm font-medium text-blue-600">High</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div></div>
+                <p class="text-sm text-gray-600 mt-1">Deploy UI changes independently.</p>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-semibold text-gray-800"><i class="fas fa-mobile-alt mr-2 text-blue-600"></i>Omnichannel Ready</span>
+                   <span class="text-sm font-medium text-blue-600">Excellent</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div></div>
+                <p class="text-sm text-gray-600 mt-1">Supports PWAs, mobile apps, and IoT.</p>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-semibold text-gray-800"><i class="fas fa-infinity mr-2 text-blue-600"></i>Future-proof</span>
+                   <span class="text-sm font-medium text-blue-600">Strong</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div>
+                <p class="text-sm text-gray-600 mt-1">Adapts to new technologies seamlessly.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Chart Section -->
+          <div class="relative z-0">
+              <h2 class="text-xl font-bold text-gray-800 mt-3"><i class="fas fa-chart-bar mr-2 text-blue-800"></i>Performance Analysis</h2>
+              <p class="text-sm text-gray-600 mb-2">Analysis shows Spartacus's JAMstack approach significantly reduces page load times compared to traditional server-rendered CMS, enhancing user experience.</p>
+              <div id="performanceChart"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // This script initializes the ECharts instance for the performance comparison chart.
+    var chartDom = document.getElementById('performanceChart');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['Spartacus', 'Traditional CMS'],
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel: {
+                    color: '#1f2937' // text-gray-800
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: 'Load Time (s)',
+                nameTextStyle: {
+                    color: '#1f2937',
+                    fontWeight: 'bold'
+                },
+                axisLabel: {
+                    color: '#1f2937'
+                }
+            }
+        ],
+        series: [
+            {
+                name: 'Page Load Time',
+                type: 'bar',
+                barWidth: '50%',
+                data: [
+                    {
+                        value: 1.2,
+                        itemStyle: {
+                            color: '#2563eb' // Primary color (blue-600)
+                        }
+                    },
+                    {
+                        value: 3.5,
+                        itemStyle: {
+                            color: '#9ca3af' // gray-400
+                        }
+                    }
+                ]
+            }
+        ],
+        textStyle: {
+          fontFamily: 'sans-serif'
+        }
+    };
+
+    option && myChart.setOption(option);
+  </script>
+</section>
+
+<section class="slide" aria-label="Slide 6">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Decorative Background Element -->
+    <i class="fa-solid fa-atom text-gray-100 text-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 opacity-60"></i>
+    
+    <main class="p-12 w-full h-full relative z-10">
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800">
+        Why Choose Spartacus?
+      </h1>
+
+      <!-- Sub-header/Annotation Box -->
+      <div class="flex items-start p-3 mb-6 bg-blue-50 border-l-4 border-blue-600">
+        <i class="fas fa-info-circle text-blue-600 fa-lg mr-4 mt-1"></i>
+        <p class="text-gray-800">
+          This page outlines the core advantages of adopting Spartacus, highlighting its seamless integration, flexibility, and enterprise-ready features for building modern, high-performance e-commerce frontends.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-x-12">
+        <!-- Left Column -->
+        <div class="flex flex-col space-y-6">
+          
+          <!-- Native Integration -->
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-blue-800 flex items-center"><i class="fas fa-plug w-7 text-blue-600"></i>Native Integration with SAP Commerce Cloud</h3>
+            <p class="text-gray-800 ml-7">Built specifically for SAP Commerce Cloud, ensuring seamless backend compatibility and optimized performance with pre-configured API connections.</p>
+            <div class="ml-7 space-y-2">
+                <span class="font-semibold text-gray-800">Backend Compatibility Meter</span>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Open-Source Flexibility -->
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-blue-800 flex items-center"><i class="fas fa-unlock-alt w-7 text-blue-600"></i>Open-Source Flexibility</h3>
+            <p class="text-gray-800 ml-7">Modular architecture allows deep customization for unique business needs with no vendor lock-in.</p>
+            <div class="ml-7">
+                <span class="inline-flex items-center bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">
+                    <i class="fab fa-creative-commons-share mr-1"></i>
+                    100% Open-Source (MIT License)
+                </span>
+            </div>
+          </div>
+
+          <!-- Future-Proof Frontend -->
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-blue-800 flex items-center"><i class="fas fa-rocket w-7 text-blue-600"></i>Future-Proof Frontend</h3>
+            <p class="text-gray-800 ml-7">Decoupled UI enables independent updates without disrupting backend logic and supports Progressive Web App (PWA) standards for fast, app-like experiences.</p>
+            <div class="ml-7">
+                <span class="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">
+                    <i class="fas fa-check-circle mr-1"></i>
+                    PWA Ready
+                </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex flex-col space-y-6">
+
+          <!-- Enterprise-Grade Ecosystem -->
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-blue-800 flex items-center"><i class="fas fa-users-cog w-7 text-blue-600"></i>Enterprise-Grade Ecosystem</h3>
+            <p class="text-gray-800 ml-7">Backed by SAP’s robust support and a large developer community. Integrates natively with SAP’s composable commerce tools (e.g., CPQ, payments).</p>
+             <div class="ml-7 pt-2">
+                <div class="flex items-center space-x-4 text-gray-800">
+                    <div class="text-center">
+                        <i class="fas fa-headset text-3xl text-blue-600"></i>
+                        <p class="text-sm mt-1">SAP Support</p>
+                    </div>
+                     <div class="text-center">
+                        <i class="fas fa-users text-3xl text-blue-600"></i>
+                        <p class="text-sm mt-1">Dev Community</p>
+                    </div>
+                     <div class="text-center">
+                        <i class="fas fa-puzzle-piece text-3xl text-blue-600"></i>
+                        <p class="text-sm mt-1">Composable Tools</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <!-- Performance & Scalability -->
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-blue-800 flex items-center"><i class="fas fa-tachometer-alt w-7 text-blue-600"></i>Performance & Scalability</h3>
+            <p class="text-gray-800 ml-7">A lightweight Angular-based framework designed for high-speed rendering that scales efficiently for high-traffic e-commerce scenarios.</p>
+            <div class="ml-7 space-y-3 pt-2">
+                <div class="flex items-center">
+                    <span class="w-32 text-gray-800 font-semibold">Rendering Speed</span>
+                    <div class="flex-1 bg-gray-200 rounded-full h-4">
+                        <div class="bg-blue-600 h-4 rounded-full" style="width: 90%"></div>
+                    </div>
+                    <span class="ml-3 font-bold text-blue-800">High</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="w-32 text-gray-800 font-semibold">Traffic Scaling</span>
+                     <div class="flex-1 bg-gray-200 rounded-full h-4">
+                        <div class="bg-blue-600 h-4 rounded-full" style="width: 95%"></div>
+                    </div>
+                    <span class="ml-3 font-bold text-blue-800">Efficient</span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quote Section -->
+      <div class="absolute bottom-12 left-12 right-12">
+        <blockquote class="border-l-4 border-blue-600 pl-6 py-2 bg-white">
+          <p class="text-xl italic text-gray-800">
+            “Spartacus unlocks agility in UI development while leveraging SAP’s commerce backbone.”
+          </p>
+        </blockquote>
+      </div>
+
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 7">
+<div class="w-[1280px] h-[720px] mx-auto relative bg-gradient-to-b from-blue-300 to-blue-600">
+   <!-- Background layer -->
+   <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-blue-100 opacity-40">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-800 to-transparent">
+    </div>
+    <div class="absolute top-10 right-10">
+     <i class="fas fa-sitemap text-blue-300 text-8xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-10 left-10">
+     <i class="fas fa-shopping-cart text-blue-800 text-6xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute top-1/3 left-10">
+     <i class="fas fa-code text-blue-700 text-7xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-1/4 right-20">
+     <i class="fas fa-layer-group text-red-600 text-6xl opacity-70">
+     </i>
+    </div>
+   </div>
+   <!-- Text layer -->
+   <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <h1 class="text-5xl font-bold text-white text-center mb-4 drop-shadow-lg">
+     E-commerce Website Structure Basics
+    </h1>
+    <p class="text-2xl text-white text-center max-w-2xl drop-shadow-md">
+     Exploring the core components and layout of a modern storefront with Spartacus
+    </p>
+    <div class="mt-8 flex gap-4">
+     <i class="fas fa-cubes text-blue-600 text-3xl animate-pulse">
+     </i>
+     <i class="fas fa-bolt text-red-600 text-3xl">
+     </i>
+     <i class="fas fa-cogs text-blue-600 text-3xl animate-pulse">
+     </i>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 8">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Main content area with padding -->
+    <main class="p-12 w-full h-full flex flex-col">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-2 h-10 flex items-center text-gray-800 shrink-0">
+        <i class="fas fa-layer-group mr-4 text-blue-600"></i>
+        Pyramid Hierarchy Model
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="relative bg-blue-50 border-l-4 border-blue-600 text-gray-700 p-3 mb-6 rounded-r-lg text-base shrink-0">
+        <i class="fas fa-info-circle mr-2 text-blue-600"></i>
+        This model illustrates a foundational framework for e-commerce success, emphasizing that skipping foundational layers destabilizes the entire structure.
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="flex-grow flex gap-6">
+
+        <!-- Left Column: The Pyramid -->
+        <div class="w-1/2 flex flex-col justify-end items-center">
+            <!-- Apex Layer -->
+            <div class="w-1/3 flex flex-col items-center mb-3">
+                <div class="bg-red-600 text-white w-full p-3 text-center shadow-lg rounded-t-lg">
+                    <h3 class="font-bold text-lg flex items-center justify-center"><i class="fas fa-star mr-2"></i>APEX</h3>
+                    <p class="text-sm font-semibold">Conversion</p>
+                </div>
+                <div class="bg-white border-x-2 border-b-2 border-gray-300 w-full p-4 text-center rounded-b-lg">
+                    <p class="text-gray-800 font-semibold flex items-center justify-center"><i class="fas fa-users text-red-600 mr-2"></i>Social Proof</p>
+                    <p class="text-xs text-gray-600 mt-1">Integrates all layers (reviews, UGC, testimonials).</p>
+                </div>
+            </div>
+
+            <!-- Middle Layer -->
+            <div class="w-2/3 flex flex-col items-center mb-3">
+                <div class="bg-blue-600 text-white w-full p-3 text-center shadow-lg rounded-t-lg">
+                    <h3 class="font-bold text-lg flex items-center justify-center"><i class="fas fa-chart-line mr-2"></i>MIDDLE LAYER</h3>
+                    <p class="text-sm font-semibold">Growth</p>
+                </div>
+                <div class="bg-white border-x-2 border-b-2 border-gray-300 w-full p-4 rounded-b-lg text-left">
+                    <ul class="space-y-2 text-sm text-gray-800">
+                        <li class="flex items-start"><i class="fas fa-envelope-open-text text-blue-600 mr-3 mt-1 w-4 text-center"></i><div><span class="font-semibold">Email + Retargeting:</span> Lead capture and relationship-building.</div></li>
+                        <li class="flex items-start"><i class="fas fa-bullhorn text-blue-600 mr-3 mt-1 w-4 text-center"></i><div><span class="font-semibold">Traffic Acquisition:</span> Sustainable only after lower layers are optimized.</div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Base Layer -->
+            <div class="w-full flex flex-col items-center">
+                <div class="bg-blue-800 text-white w-full p-3 text-center shadow-lg rounded-t-lg">
+                    <h3 class="font-bold text-lg flex items-center justify-center"><i class="fas fa-foundation mr-2"></i>BASE LAYER</h3>
+                    <p class="text-sm font-semibold">Stability</p>
+                </div>
+                <div class="bg-white border-x-2 border-b-2 border-gray-300 w-full p-4 rounded-b-lg text-left">
+                     <ul class="space-y-2 text-sm text-gray-800">
+                        <li class="flex items-start"><i class="fas fa-box-open text-blue-800 mr-3 mt-1 w-4 text-center"></i><div><span class="font-semibold">Product:</span> The core offering (quality, demand).</div></li>
+                        <li class="flex items-start"><i class="fas fa-copyright text-blue-800 mr-3 mt-1 w-4 text-center"></i><div><span class="font-semibold">Brand:</span> Emotional engagement (trust, identity).</div></li>
+                        <li class="flex items-start"><i class="fas fa-desktop text-blue-800 mr-3 mt-1 w-4 text-center"></i><div><span class="font-semibold">Website:</span> Functional UI/UX (Spartacus-driven agility).</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Spartacus Alignment & Takeaway -->
+        <div class="w-1/2 flex flex-col gap-6">
+
+            <!-- Spartacus Alignment Section -->
+            <div class="flex-1 flex flex-col border border-gray-200 rounded-lg p-6 bg-gray-50/50">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-link mr-3 text-blue-600"></i>
+                    Spartacus Alignment
+                </h2>
+                <div class="text-gray-700 space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-800 mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold text-blue-800">Base Layer Support</h4>
+                            <p class="text-sm">Enables a scalable and headless website structure, providing the robust foundation needed for product and brand presentation.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold text-blue-600">Middle Layer Enablement</h4>
+                            <p class="text-sm">Supports seamless UI for retargeting scripts and traffic acquisition tools through its component-based, extensible architecture.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-red-600 mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold text-red-600">Apex Integration</h4>
+                            <p class="text-sm">Facilitates easy integration of social proof (e.g., reviews, ratings) via dynamic and reusable CMS components.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Takeaway Section -->
+            <div class="border-t-4 border-red-600 bg-red-50 p-6 rounded-b-lg">
+                <h2 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                    <i class="fas fa-key mr-3 text-red-600"></i>
+                    Key Takeaway
+                </h2>
+                <blockquote class="text-gray-700 italic relative">
+                    <p>"Prioritize foundational layers first. Spartacus provides the critical UI scalability and agility required to build and grow the e-commerce pyramid effectively from the ground up."</p>
+                </blockquote>
+            </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 9">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full relative">
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800">
+        Category & Subcategory Design
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="flex items-start p-3 mb-8 bg-blue-50 border-l-4 border-blue-600 text-gray-700">
+        <i class="fas fa-circle-info text-blue-600 fa-fw mt-1 mr-3"></i>
+        <p>This slide outlines the foundational principles for designing category and subcategory structures, covering key structural elements, user experience best practices, and specific implementation details within the Spartacus framework.</p>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="flex w-full space-x-12">
+        
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col space-y-8">
+          
+          <!-- Key Elements Section -->
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Key Elements of Effective Structure</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-sitemap text-blue-600 fa-fw w-6 text-center mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Hierarchical Navigation</h3>
+                  <p class="text-gray-600 text-sm">Clear parent-child relationships for intuitive browsing and discovery.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-location-arrow text-blue-600 fa-fw w-6 text-center mt-1 mr-3 -rotate-45"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Breadcrumbs</h3>
+                  <p class="text-gray-600 text-sm">Displays user's path (e.g., Home > Electronics > Smartphones) for easy orientation and backtracking.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-filter text-blue-600 fa-fw w-6 text-center mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Filter & Sort Options</h3>
+                  <p class="text-gray-600 text-sm">Enables users to refine product listings by price, brand, ratings, and other attributes.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Spartacus-Specific Considerations Section -->
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Spartacus-Specific Considerations</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-puzzle-piece text-blue-600 fa-fw w-6 text-center mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Leverage Pre-built Components</h3>
+                  <p class="text-gray-600 text-sm">Utilize SAP’s `CategoryNavigationComponent` for rapid development.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-file-code text-blue-600 fa-fw w-6 text-center mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Customize via OCC APIs</h3>
+                  <p class="text-gray-600 text-sm">Modify category templates and fetch dynamic content using Commerce Cloud APIs.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-rocket text-blue-600 fa-fw w-6 text-center mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Optimize Performance</h3>
+                  <p class="text-gray-600 text-sm">Implement lazy loading for subcategories to improve initial page load times.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col space-y-8">
+            
+          <!-- UX Best Practices Section -->
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">UX Best Practices</h2>
+            <div class="relative pl-8">
+              <!-- Vertical line for the steps -->
+              <div class="absolute left-0 top-0 h-full w-[2px] bg-blue-200"></div>
+              <div class="space-y-4">
+                <div class="relative">
+                  <div class="absolute -left-8 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-white"></div>
+                  <h3 class="font-semibold text-gray-800">Limit Subcategory Depth</h3>
+                  <p class="text-gray-600 text-sm">Keep navigation to a maximum of 2-3 levels to prevent user confusion and complexity.</p>
+                </div>
+                <div class="relative">
+                  <div class="absolute -left-8 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-white"></div>
+                  <h3 class="font-semibold text-gray-800">Visual Consistency</h3>
+                  <p class="text-gray-600 text-sm">Use uniform card layouts and typography for products and subcategories to create a cohesive experience.</p>
+                </div>
+                <div class="relative">
+                  <div class="absolute -left-8 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-white"></div>
+                  <h3 class="font-semibold text-gray-800">Mobile-Friendly Grids</h3>
+                  <p class="text-gray-600 text-sm">Ensure responsive designs that adapt seamlessly for a consistent cross-device journey.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Section -->
+          <div>
+              <h2 class="text-xl font-bold text-gray-800 mb-2">Quote &amp; Impact Analysis</h2>
+              <blockquote class="border-l-4 border-blue-200 pl-4 py-1 italic text-gray-600 text-sm mb-4">
+                  “A well-structured category page reduces bounce rates by 30%.”
+              </blockquote>
+              <div id="bounceRateChart"></div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Footer: Next Topic -->
+      <div class="absolute bottom-12 right-12 text-right">
+        <span class="text-gray-500 font-semibold">Next: </span>
+        <span class="text-gray-800 font-bold">Product Listing Page Optimization</span>
+        <i class="fas fa-arrow-right text-gray-500 ml-2"></i>
+      </div>
+
+    </main>
+  </div>
+  
+  <script>
+    // ECharts initialization script for the bounce rate comparison chart.
+    var bounceRateChart = echarts.init(document.getElementById('bounceRateChart'));
+    var option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: '{b}: {c}%'
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['Poor Structure', 'Well-Structured'],
+          axisTick: { alignWithLabel: true },
+          axisLabel: { color: '#1f2937', fontWeight: 'bold' }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Bounce Rate (%)',
+          nameTextStyle: {
+            color: '#1f2937'
+          },
+          axisLabel: { color: '#4b5563' }
+        }
+      ],
+      series: [
+        {
+          name: 'Bounce Rate',
+          type: 'bar',
+          barWidth: '40%',
+          data: [
+            {
+              value: 65,
+              itemStyle: { color: '#dc2626' } // Accent color (red) for negative
+            },
+            {
+              value: 45.5,
+              itemStyle: { color: '#2563eb' } // Primary color (blue) for positive
+            }
+          ],
+          label: {
+            show: true,
+            position: 'top',
+            formatter: '{c}%',
+            color: '#1f2937'
+          }
+        }
+      ]
+    };
+    bounceRateChart.setOption(option);
+  </script>
+</section>
+
+<section class="slide" aria-label="Slide 10">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Decorative background element -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-gray-100" style="font-size: 450px;">
+        <i class="fa-solid fa-link"></i>
+    </div>
+    
+    <main class="p-12 w-full h-full relative z-10 flex flex-col">
+      <h1 class="text-[32px] font-bold mb-2 text-gray-800 h-auto flex items-center" style="padding-top: 12px; margin-bottom: 12px;">
+        SEO-Friendly URL Structure
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="bg-blue-50 border-l-4 border-blue-600 text-gray-800 p-4 rounded-r-lg mb-6 flex items-start">
+        <i class="fa-solid fa-circle-info text-blue-600 text-xl mr-3 mt-1"></i>
+        <div>
+          <p class="font-semibold">This page outlines the importance and best practices for creating SEO-friendly URLs in a Spartacus-based e-commerce site, enhancing both user experience and search engine visibility.</p>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-grow flex gap-8">
+
+        <!-- Left Column: Why It Matters -->
+        <div class="w-2/5 flex flex-col gap-y-3">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">Why It Matters</h2>
+          
+          <div class="flex-grow flex flex-col justify-around gap-y-3">
+            <!-- User Trust -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100">
+                <i class="fa-solid fa-user-shield text-2xl text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800">User Trust & Clarity</h3>
+                <p class="text-gray-800">Transparent URLs enhance credibility, ensuring users feel secure navigating your site.</p>
+              </div>
+            </div>
+
+            <!-- SEO -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100">
+                <i class="fa-solid fa-magnifying-glass-chart text-2xl text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800">Search Engine Optimization</h3>
+                <p class="text-gray-800">Clean URLs improve crawlability and ranking in search results.</p>
+              </div>
+            </div>
+
+            <!-- Memorability -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100">
+                <i class="fa-solid fa-brain text-2xl text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800">Memorability</h3>
+                <p class="text-gray-800">Simple, logical URLs are easier for users to recall and share.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Best Practices & Tip -->
+        <div class="w-3/5 flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">Best Practices for Spartacus UI</h2>
+
+          <div class="flex flex-col gap-y-3 flex-grow">
+            <!-- 1. Semantic Structure -->
+            <div class="p-3">
+              <h3 class="font-bold text-lg text-gray-800 flex items-center gap-x-2"><span class="flex items-center justify-center w-6 h-6 bg-blue-600 text-white rounded-full text-sm">1</span> Semantic Structure</h3>
+              <p class="text-gray-800 ml-8 mb-1">Use descriptive keywords. Avoid IDs or random strings.</p>
+              <div class="ml-8 flex items-center gap-x-4 text-sm">
+                <span class="text-red-600 font-mono bg-red-50 p-1 rounded"><i class="fa-solid fa-xmark mr-1"></i>/prod=1234</span>
+                <i class="fa-solid fa-arrow-right-long text-gray-400"></i>
+                <span class="text-green-700 font-mono bg-green-50 p-1 rounded"><i class="fa-solid fa-check mr-1"></i>/wireless-headphones</span>
+              </div>
+            </div>
+            
+            <!-- 2. Hierarchy & Breadcrumbs -->
+            <div class="p-3">
+              <h3 class="font-bold text-lg text-gray-800 flex items-center gap-x-2"><span class="flex items-center justify-center w-6 h-6 bg-blue-600 text-white rounded-full text-sm">2</span> Hierarchy & Breadcrumbs</h3>
+              <p class="text-gray-800 ml-8">Reflect category hierarchy and align with Spartacus’s routing for consistency. (e.g., <code class="bg-gray-100 p-1 rounded text-sm">/men/shoes/running</code>)</p>
+            </div>
+
+            <!-- 3. Hyphens Over Underscores -->
+            <div class="p-3">
+              <h3 class="font-bold text-lg text-gray-800 flex items-center gap-x-2"><span class="flex items-center justify-center w-6 h-6 bg-blue-600 text-white rounded-full text-sm">3</span> Hyphens Over Underscores</h3>
+              <p class="text-gray-800 ml-8">Hyphens (-) act as word separators for search engines.</p>
+              <div class="ml-8 flex items-center gap-x-4 text-sm">
+                 <span class="text-red-600 font-mono bg-red-50 p-1 rounded"><i class="fa-solid fa-xmark mr-1"></i>/summer_dresses</span>
+                 <i class="fa-solid fa-arrow-right-long text-gray-400"></i>
+                 <span class="text-green-700 font-mono bg-green-50 p-1 rounded"><i class="fa-solid fa-check mr-1"></i>/summer-dresses</span>
+              </div>
+            </div>
+            
+            <!-- 4. Lowercase & Static URLs -->
+            <div class="p-3">
+              <h3 class="font-bold text-lg text-gray-800 flex items-center gap-x-2"><span class="flex items-center justify-center w-6 h-6 bg-blue-600 text-white rounded-full text-sm">4</span> Lowercase & Static URLs</h3>
+              <p class="text-gray-800 ml-8">Prevent case sensitivity issues and avoid dynamic parameters where possible to ensure clean, predictable URLs.</p>
+            </div>
+          </div>
+          
+          <!-- Implementation Tip -->
+          <div class="mt-auto bg-blue-800/5 border-l-4 border-blue-800 text-gray-800 p-4 rounded-r-lg flex items-start gap-x-3" style="margin-bottom: 12px;">
+            <i class="fa-solid fa-lightbulb text-blue-800 text-2xl"></i>
+            <div>
+              <h3 class="font-bold text-blue-800">Spartacus Implementation Tip</h3>
+              <p>Leverage Angular routing to auto-generate SEO-friendly paths aligned with product and category metadata from the backend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 11">
+<div class="w-[1280px] h-[720px] mx-auto relative bg-gradient-to-b from-blue-600 to-blue-800">
+   <!-- Background layer -->
+   <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-blue-300 opacity-40">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-900 to-transparent">
+    </div>
+    <div class="absolute top-10 right-10">
+     <i class="fas fa-cogs text-blue-400 text-8xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-10 left-10">
+     <i class="fas fa-shopping-cart text-blue-400 text-6xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute top-1/3 left-10">
+     <i class="fas fa-code text-blue-400 text-7xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-1/4 right-20">
+     <i class="fas fa-check-circle text-red-500 text-6xl opacity-70">
+     </i>
+    </div>
+   </div>
+   <!-- Text layer -->
+   <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <h1 class="text-5xl font-bold text-white text-center mb-4 drop-shadow-lg">
+     Spartacus Implementation Best Practices
+    </h1>
+    <p class="text-2xl text-white text-center max-w-2xl drop-shadow-md">
+     Key strategies for building robust and scalable Spartacus storefronts
+    </p>
+    <div class="mt-8 flex gap-4">
+     <i class="fas fa-bolt text-red-600 text-3xl animate-pulse">
+     </i>
+     <i class="fas fa-shield-halved text-white text-3xl">
+     </i>
+     <i class="fas fa-layer-group text-red-600 text-3xl animate-pulse">
+     </i>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 12">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Main content area with padding -->
+    <main class="p-12 w-full h-full">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-2 h-10 flex items-end text-gray-800">
+        Modular Component Approach
+      </h1>
+
+      <!-- Explanatory Annotation Box -->
+      <div class="relative mb-6">
+        <div class="border-l-4 border-blue-600 pl-4 py-2 bg-gray-50">
+          <p class="text-gray-600 italic">
+            This slide outlines the principles, benefits, and best practices for creating a modular component architecture in Spartacus, enhancing reusability and development efficiency.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Main Content Grid -->
+      <div class="flex gap-12 text-gray-800">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col gap-3">
+          
+          <!-- Core Principles Section -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-3 flex items-center"><i class="fas fa-sitemap mr-3"></i>Core Principles</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-recycle text-blue-600 mt-1 mr-4 w-5 text-center"></i>
+                <div>
+                  <h3 class="font-semibold">Reusability</h3>
+                  <p class="text-gray-600 text-sm">Design components as standalone units for cross-project utilization.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-unlink text-blue-600 mt-1 mr-4 w-5 text-center"></i>
+                <div>
+                  <h3 class="font-semibold">Decoupling</h3>
+                  <p class="text-gray-600 text-sm">Minimize dependencies between components for easier maintenance.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-sliders-h text-blue-600 mt-1 mr-4 w-5 text-center"></i>
+                <div>
+                  <h3 class="font-semibold">Configurability</h3>
+                  <p class="text-gray-600 text-sm">Enable property-driven customization without code modification.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Recommended Practices Section -->
+          <div class="mt-3">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 flex items-center"><i class="fas fa-stream mr-3"></i>Recommended Practices</h2>
+            <div class="relative flex flex-col space-y-3">
+              <!-- Decorative Line -->
+              <div class="absolute left-[14px] top-2 bottom-2 w-0.5 bg-blue-200" style="z-index: 0;"></div>
+              
+              <!-- Step 1 -->
+              <div class="flex items-start relative z-10">
+                <div class="h-8 w-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+                <div class="ml-4">
+                  <h3 class="font-semibold flex items-center">Atomic Design Hierarchy <i class="fas fa-cubes ml-2 text-blue-600"></i></h3>
+                  <p class="text-gray-600 text-sm">Structure as Atoms → Molecules → Organisms → Templates (Spartacus-compliant).</p>
+                </div>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="flex items-start relative z-10">
+                <div class="h-8 w-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+                <div class="ml-4">
+                  <h3 class="font-semibold flex items-center">Feature Modules <i class="fas fa-puzzle-piece ml-2 text-blue-600"></i></h3>
+                  <p class="text-gray-600 text-sm">Isolate checkout, cart, or user-account functionality for lazy loading compatibility.</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex items-start relative z-10">
+                <div class="h-8 w-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+                <div class="ml-4">
+                  <h3 class="font-semibold flex items-center">Version Control Strategy <i class="fas fa-code-branch ml-2 text-blue-600"></i></h3>
+                  <p class="text-gray-600 text-sm">Use semantic versioning and a dedicated npm registry for shared libraries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col">
+
+          <!-- Implementation Benefits Section -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-3 flex items-center"><i class="fas fa-chart-line mr-3"></i>Implementation Benefits</h2>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <span class="text-green-500 mr-3"><i class="fas fa-check-circle fa-fw"></i></span>
+                <div>
+                  <h3 class="font-semibold">Development Efficiency: 40%+ time reduction</h3>
+                  <p class="text-gray-600 text-sm">Achieved via pre-built UI libraries and reusable components.</p>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5 mt-1">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-green-500 mr-3"><i class="fas fa-check-circle fa-fw"></i></span>
+                <div>
+                  <h3 class="font-semibold">Consistent UX</h3>
+                  <p class="text-gray-600 text-sm">Unified design patterns across all e-commerce pages ensure a seamless user journey.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-green-500 mr-3"><i class="fas fa-check-circle fa-fw"></i></span>
+                <div>
+                  <h3 class="font-semibold">Cost Optimization</h3>
+                  <p class="text-gray-600 text-sm">Reduced QA cycles and regression testing overhead lead to significant savings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Maintenance Protocols Section -->
+          <div class="mt-6">
+             <h2 class="text-xl font-bold text-blue-800 mb-3 flex items-center"><i class="fas fa-shield-alt mr-3"></i>Maintenance Protocols</h2>
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="border-b-2 border-gray-200">
+                        <th class="py-2 w-1/3 font-semibold">Protocol</th>
+                        <th class="py-2 w-2/3 font-semibold">Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-100">
+                        <td class="py-2 font-medium flex items-center"><i class="fas fa-book text-blue-600 mr-3"></i>Documentation</td>
+                        <td class="py-2 text-gray-600">Storybook integration for component cataloging.</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="py-2 font-medium flex items-center"><i class="fas fa-vial text-blue-600 mr-3"></i>Testing</td>
+                        <td class="py-2 text-gray-600">80%+ unit test coverage mandated for shared modules.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 font-medium flex items-center"><i class="fas fa-history text-blue-600 mr-3"></i>Deprecation</td>
+                        <td class="py-2 text-gray-600">Phased retirement path for legacy components.</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <!-- Quote Block -->
+          <div class="mt-auto pt-3">
+             <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 text-gray-700">
+              <i class="fas fa-quote-left text-blue-200 text-2xl absolute -mt-3 -ml-2"></i>
+              <p class="relative italic z-10">"Reusable Spartacus components cut our checkout page development time by 65%."</p>
+              <footer class="text-right text-sm font-semibold mt-2">– Royal Cyber Implementation Case Study</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 13">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800">
+        Navigation & Breadcrumbs
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="relative bg-blue-50 border-l-4 border-blue-600 text-gray-800 p-4 mb-6 z-0">
+        <div class="flex items-start">
+          <i class="fas fa-info-circle text-blue-600 text-xl mr-3 mt-1"></i>
+          <div>
+            <h2 class="font-bold text-lg text-blue-800">Spartacus Implementation Best Practices</h2>
+            <p class="text-gray-700">This slide outlines best practices for implementing intuitive navigation menus and breadcrumbs in a Spartacus-based e-commerce site to enhance user experience and SEO.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Main Content Area -->
+      <div class="flex gap-x-6">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col gap-y-3">
+          
+          <!-- Key Principles -->
+          <div class="z-10 relative">
+            <h3 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-sitemap mr-2 text-blue-600"></i>Key Principles for Effective Navigation</h3>
+            <div class="space-y-4">
+              <!-- Principle 1: Intuitive Menu Structures -->
+              <div class="flex items-start">
+                <span class="flex-shrink-0 h-8 w-8 bg-blue-600 text-white flex items-center justify-center rounded-full font-bold mr-4">1</span>
+                <div>
+                  <h4 class="font-semibold text-lg text-gray-800">Intuitive Menu Structures</h4>
+                  <ul class="list-disc pl-5 mt-1 text-gray-700">
+                    <li>Implement hierarchical categories with logical grouping.</li>
+                    <li>Use descriptive labels (e.g., "Men’s Footwear" vs. "Shoes").</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Principle 2: Breadcrumb Navigation -->
+              <div class="flex items-start">
+                <span class="flex-shrink-0 h-8 w-8 bg-blue-600 text-white flex items-center justify-center rounded-full font-bold mr-4">2</span>
+                <div>
+                  <h4 class="font-semibold text-lg text-gray-800">Breadcrumb Navigation</h4>
+                  <p class="text-gray-700 mt-1">Dynamically display the user’s path to improve orientation and enable easy backward navigation.</p>
+                  <!-- Visual Breadcrumb Example -->
+                  <div class="mt-2 p-3 bg-gray-100 rounded-md text-sm">
+                    <i class="fas fa-route text-gray-500 mr-2"></i>
+                    <a href="#" class="text-blue-600 hover:underline">Home</a>
+                    <span class="mx-2 text-gray-400">&gt;</span>
+                    <a href="#" class="text-blue-600 hover:underline">Electronics</a>
+                    <span class="mx-2 text-gray-400">&gt;</span>
+                    <span class="text-gray-800 font-medium">Headphones</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Spartacus-Specific Recommendations -->
+          <div class="z-10 relative mt-3">
+            <h3 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-cogs mr-2 text-blue-600"></i>Spartacus-Specific Recommendations</h3>
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-blue-800 text-white">
+                  <th class="p-2 w-1/3 font-semibold">Recommendation</th>
+                  <th class="p-2 w-2/3 font-semibold">Implementation Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b bg-white hover:bg-blue-50">
+                  <td class="p-2 font-medium text-gray-800 align-top"><i class="fas fa-database mr-2 text-blue-600"></i>Leverage CMS</td>
+                  <td class="p-2 text-gray-700">Manage navigation menus via SAP Commerce Cloud CMS for maximum flexibility and business user control.</td>
+                </tr>
+                <tr class="border-b bg-white hover:bg-blue-50">
+                  <td class="p-2 font-medium text-gray-800 align-top"><i class="fas fa-ellipsis-h mr-2 text-blue-600"></i>Configure Breadcrumbs</td>
+                  <td class="p-2 text-gray-700">Use Spartacus’s `BreadcrumbComponent` and provide structured data (JSON-LD) for enhanced SEO benefits.</td>
+                </tr>
+                <tr class="bg-white hover:bg-blue-50">
+                  <td class="p-2 font-medium text-gray-800 align-top"><i class="fas fa-mobile-alt mr-2 text-blue-600"></i>Mobile Optimization</td>
+                  <td class="p-2 text-gray-700">Ensure hamburger menus and breadcrumbs are touch-friendly and fully responsive on all devices.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col gap-y-3">
+          
+          <!-- UX Benefits -->
+          <div class="z-10 relative">
+            <h3 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-chart-line mr-2 text-blue-600"></i>UX Benefits &amp; Impact</h3>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-600 fa-fw text-xl mr-3"></i>
+                <p class="text-gray-700">Reduces bounce rates by <span class="font-bold text-blue-800">20-30%</span> through streamlined site exploration.</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-600 fa-fw text-xl mr-3"></i>
+                <p class="text-gray-700">Improves <span class="font-bold text-blue-800">SEO</span> via structured breadcrumb markup (JSON-LD).</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-600 fa-fw text-xl mr-3"></i>
+                <p class="text-gray-700">Enhances <span class="font-bold text-blue-800">accessibility</span> with WCAG-compliant navigational trails.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chart Section -->
+          <div class="z-10 relative bg-gray-50 p-4 rounded-lg mt-3">
+             <h4 class="font-bold text-lg text-gray-800 mb-2">Analysis: Impact on User Bounce Rate</h4>
+             <p class="text-sm text-gray-600 mb-2">Implementing optimized navigation and breadcrumbs significantly lowers the user bounce rate, indicating a more engaging and less confusing user journey.</p>
+             <div id="bounceRateChart" class="max-h-[400px]"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+  
+  <script>
+    // This script initializes the ECharts instance
+    var chartDom = document.getElementById('bounceRateChart');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['Before Optimization', 'After Spartacus Implementation'],
+          axisTick: {
+            alignWithLabel: true
+          },
+          axisLabel: {
+            color: '#1f2937' // text-gray-800
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Bounce Rate (%)',
+          axisLabel: {
+            formatter: '{value} %',
+            color: '#1f2937' // text-gray-800
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'Bounce Rate',
+          type: 'bar',
+          barWidth: '50%',
+          data: [
+            {
+              value: 68,
+              itemStyle: {
+                color: '#dc2626' // Accent color: red-600 for 'Before'
+              }
+            },
+            {
+              value: 45,
+              itemStyle: {
+                color: '#2563eb' // Primary color: blue-600 for 'After'
+              }
+            }
+          ]
+        }
+      ],
+      color: ['#2563eb'] // Default series color
+    };
+
+    option && myChart.setOption(option);
+  </script>
+</section>
+
+<section class="slide" aria-label="Slide 14">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col">
+      <!-- SLIDE TITLE -->
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800">
+        Mobile-First Design
+      </h1>
+      
+      <!-- ANNOTATION BOX -->
+      <div class="border-l-4 border-blue-600 pl-4 py-2 bg-blue-50/50 mb-8">
+        <p class="text-gray-700 text-lg italic">
+          This slide outlines the critical importance and practical application of a mobile-first strategy in Spartacus, covering core principles, specific tips, and a real-world success story.
+        </p>
+      </div>
+
+      <!-- MAIN CONTENT AREA: 2x2 GRID -->
+      <div class="flex-grow grid grid-cols-2 grid-rows-2 gap-x-12 gap-y-8">
+
+        <!-- TOP-LEFT: WHY MOBILE-FIRST? -->
+        <div class="flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-600 pb-2 mb-6">Why Mobile-First?</h2>
+          <div class="flex-grow flex flex-col justify-around">
+            <!-- STATISTIC -->
+            <div class="flex items-center space-x-6">
+              <i class="fas fa-mobile-screen-button text-8xl text-blue-600"></i>
+              <div>
+                <p class="text-6xl font-bold text-blue-600">60%<span class="text-4xl align-top">+</span></p>
+                <p class="text-gray-600 mt-1">E-commerce traffic from mobile devices (2023).</p>
+              </div>
+            </div>
+            <!-- BENEFITS -->
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-expand-arrows-alt fa-fw text-xl text-blue-800 mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Seamless UX Across Devices</h3>
+                  <p class="text-gray-600">Ensures a great experience by prioritizing smaller displays first.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fab fa-google fa-fw text-xl text-blue-800 mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Better SEO Ranking</h3>
+                  <p class="text-gray-600">Aligns with Google’s mobile-first indexing for improved visibility.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOP-RIGHT: KEY PRINCIPLES -->
+        <div class="flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-600 pb-2 mb-6">Key Principles</h2>
+          <div class="flex-grow flex flex-col justify-around space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-th-large text-5xl text-blue-800 w-20 text-center"></i>
+              <div class="ml-4">
+                <h3 class="font-bold text-lg text-gray-800">1. Fluid Grids</h3>
+                <p class="text-gray-600">Use relative units (%, vw) instead of fixed pixels for layout scalability.</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-image text-5xl text-blue-800 w-20 text-center"></i>
+              <div class="ml-4">
+                <h3 class="font-bold text-lg text-gray-800">2. Flexible Media</h3>
+                <p class="text-gray-600">Images/videos scale proportionally via CSS (`max-width: 100%`).</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-ruler-horizontal text-5xl text-blue-800 w-20 text-center"></i>
+              <div class="ml-4">
+                <h3 class="font-bold text-lg text-gray-800">3. Breakpoint Optimization</h3>
+                <p class="text-gray-600">Define breakpoints based on content (e.g., 320px, 768px, 1024px).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM-LEFT: SPARTACUS-SPECIFIC TIPS -->
+        <div class="flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-600 pb-2 mb-6">Spartacus-Specific Tips</h2>
+          <ul class="space-y-4 text-gray-700 flex-grow flex flex-col justify-center">
+            <li class="flex items-start text-lg">
+              <i class="fas fa-check-circle text-blue-600 mt-1.5 mr-4"></i>
+              <span>Leverage <strong>CSS Grid</strong> for Spartacus storefront components.</span>
+            </li>
+            <li class="flex items-start text-lg">
+              <i class="fas fa-check-circle text-blue-600 mt-1.5 mr-4"></i>
+              <span>Test with <strong>Chrome DevTools Device Mode</strong> pre-launch.</span>
+            </li>
+            <li class="flex items-start text-lg">
+              <i class="fas fa-check-circle text-blue-600 mt-1.5 mr-4"></i>
+              <span>Implement <strong>touch-friendly</strong> CTAs (minimum 48x48px tap targets).</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BOTTOM-RIGHT: INDUSTRY EXAMPLE & QUOTE -->
+        <div class="flex flex-col justify-between">
+          <!-- Industry Example -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-600 pb-2 mb-6">Example from Industry</h2>
+            <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-lg text-gray-800">Currys UK (2022)</p>
+                <p class="text-gray-600">Conversion lift post-mobile-first redesign.</p>
+              </div>
+              <div class="text-center">
+                <p class="text-6xl font-extrabold text-red-600 flex items-center">
+                  30% <i class="fas fa-arrow-up text-4xl ml-2"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Quote -->
+          <div class="relative mt-4 pt-4">
+             <i class="fas fa-quote-left text-6xl text-gray-200 absolute -top-2 -left-4 -z-10"></i>
+            <blockquote class="text-lg italic text-gray-700 text-right">
+              "Design for the smallest screen first, then progressively enhance for larger devices."
+              <footer class="mt-2 text-sm text-gray-500 not-italic font-semibold">— Ethan Marcotte, Responsive Web Design Pioneer</footer>
+            </blockquote>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 15">
+<div class="w-[1280px] h-[720px] mx-auto relative bg-gradient-to-b from-blue-600 to-blue-800">
+   <!-- Background layer -->
+   <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-blue-200 opacity-40">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-900 to-transparent">
+    </div>
+    <div class="absolute top-10 right-10">
+     <i class="fas fa-puzzle-piece text-blue-400 text-8xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-10 left-10">
+     <i class="fas fa-shopping-cart text-blue-400 text-6xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute top-1/3 left-10">
+     <i class="fas fa-users text-blue-400 text-7xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-1/4 right-20">
+     <i class="fas fa-star text-red-600 text-6xl opacity-70">
+     </i>
+    </div>
+   </div>
+   <!-- Text layer -->
+   <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <h1 class="text-5xl font-bold text-white text-center mb-4 drop-shadow-lg">
+     Enhancing UX with Spartacus Features
+    </h1>
+    <p class="text-2xl text-white text-center max-w-2xl drop-shadow-md">
+     Leveraging Spartacus components to improve user interaction and satisfaction
+    </p>
+    <div class="mt-8 flex gap-4">
+     <i class="fas fa-rocket text-red-600 text-3xl animate-pulse">
+     </i>
+     <i class="fas fa-puzzle-piece text-white text-3xl">
+     </i>
+     <i class="fas fa-user-check text-red-600 text-3xl animate-pulse">
+     </i>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 16">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Decorative background element -->
+    <div class="absolute top-0 right-0 h-48 w-48 z-0">
+        <div class="absolute -top-12 -right-12 h-48 w-48 border-8 border-blue-600 opacity-10 rounded-full"></div>
+        <div class="absolute top-8 right-8 h-32 w-32 border-4 border-blue-600 opacity-10 rounded-full"></div>
+    </div>
+    <div class="absolute bottom-0 left-0 h-48 w-48 z-0">
+        <div class="absolute -bottom-12 -left-12 h-48 w-48 border-8 border-gray-300 opacity-20 rounded-full"></div>
+    </div>
+
+    <main class="p-12 w-full h-full relative z-10 flex flex-col">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-4 h-10 items-end text-gray-800">
+        Product Page Optimization
+      </h1>
+      
+      <!-- Explanatory Comment Box -->
+      <div class="relative pl-6 py-3 mb-6 bg-blue-50 border-l-4 border-blue-600">
+        <i class="fas fa-info-circle text-blue-600 absolute left-[-10px] top-1/2 -translate-y-1/2 bg-white rounded-full p-1"></i>
+        <p class="text-gray-700 text-lg">
+          This slide outlines key Spartacus features that directly enhance the User Experience (UX) on product pages, supported by industry data and performance metrics.
+        </p>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-grow flex gap-x-12">
+        
+        <!-- Left Column: Key Features -->
+        <div class="w-1/2 flex flex-col space-y-3">
+          <h2 class="text-xl font-bold text-gray-800 border-b-2 border-blue-600 pb-2 mb-1">Key Spartacus Features for UX Enhancement</h2>
+
+          <div class="flex items-start pt-3">
+            <div class="w-12 text-center text-2xl text-blue-600"><i class="fas fa-cubes"></i></div>
+            <div class="flex-1 pl-3">
+              <h3 class="font-bold text-gray-800">1. Dynamic Product Display</h3>
+              <p class="text-gray-700 text-sm">Enables interactive carousels, zoom-in imagery, and 360° product views using native Spartacus components.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start pt-3">
+            <div class="w-12 text-center text-2xl text-blue-600"><i class="fas fa-brain"></i></div>
+            <div class="flex-1 pl-3">
+              <h3 class="font-bold text-gray-800">2. Seamless Personalization</h3>
+              <p class="text-gray-700 text-sm">Integrates with SAP Commerce Cloud for AI-driven real-time product and content recommendations.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start pt-3">
+            <div class="w-12 text-center text-2xl text-blue-600"><i class="fas fa-credit-card"></i></div>
+            <div class="flex-1 pl-3">
+              <h3 class="font-bold text-gray-800">3. Streamlined Checkout Integration</h3>
+              <p class="text-gray-700 text-sm">Minimizes steps and friction with a pre-built, optimized one-page checkout UI component.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start pt-3">
+            <div class="w-12 text-center text-2xl text-blue-600"><i class="fas fa-mobile-alt"></i></div>
+            <div class="flex-1 pl-3">
+              <h3 class="font-bold text-gray-800">4. Mobile-First UI Components</h3>
+              <p class="text-gray-700 text-sm">Ensures a fully responsive and fast-loading experience on all devices, critical for user retention.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start pt-3">
+            <div class="w-12 text-center text-2xl text-blue-600"><i class="fas fa-universal-access"></i></div>
+            <div class="flex-1 pl-3">
+              <h3 class="font-bold text-gray-800">5. SEO & Accessibility Compliance</h3>
+              <p class="text-gray-700 text-sm">Provides ADA/WCAG-ready templates and structured data for better search engine visibility and inclusivity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Data & Impact Visualization -->
+        <div class="w-1/2 flex flex-col">
+          <h2 class="text-xl font-bold text-gray-800 border-b-2 border-blue-600 pb-2 mb-4">Performance Impact & Statistics</h2>
+          
+          <div class="flex-grow grid grid-rows-3 grid-cols-2 gap-x-12 gap-y-4">
+              <!-- Cart Abandonment Stat -->
+              <div class="col-span-2 bg-red-50 p-4 flex items-center justify-center text-center border border-red-200 rounded-lg">
+                  <div>
+                    <div class="text-6xl font-bold text-red-600">70%</div>
+                    <p class="text-gray-800 font-semibold mt-1">Cart Abandonment Due to Complex Checkout</p>
+                    <p class="text-sm text-gray-600">Spartacus' streamlined flow directly addresses this, recovering significant revenue.</p>
+                  </div>
+              </div>
+
+              <!-- Bounce Rate Reduction -->
+              <div>
+                  <h3 class="font-semibold text-gray-800">Bounce Rate Reduction</h3>
+                  <p class="text-3xl font-bold text-blue-800 flex items-center"><i class="fas fa-arrow-down mr-2 text-green-500"></i>12%</p>
+                  <p class="text-xs text-gray-600">Via engaging dynamic displays.</p>
+              </div>
+
+              <!-- Conversion Increase -->
+              <div>
+                  <h3 class="font-semibold text-gray-800">Conversion Increase</h3>
+                  <p class="text-3xl font-bold text-blue-800 flex items-center"><i class="fas fa-arrow-up mr-2 text-green-500"></i>8-10%</p>
+                  <p class="text-xs text-gray-600">With personalized content.</p>
+              </div>
+              
+              <!-- Organic Traffic -->
+              <div>
+                <h3 class="font-semibold text-gray-800">Higher Organic Traffic</h3>
+                <p class="text-3xl font-bold text-blue-800 flex items-center"><i class="fas fa-arrow-up mr-2 text-green-500"></i>15%</p>
+                <p class="text-xs text-gray-600">From SEO & Accessibility compliance.</p>
+              </div>
+
+              <!-- Mobile Compatibility -->
+              <div>
+                <h3 class="font-semibold text-gray-800">Mobile Compatibility</h3>
+                <div class="w-full progress-bar-bg rounded-full h-4 mt-2">
+                    <div class="progress-bar-fill h-4 rounded-full" style="width: 98%;"></div>
+                </div>
+                <p class="text-right text-sm font-bold text-blue-800 mt-1">98%</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section: Industry Context -->
+      <div class="mt-auto pt-4">
+        <div class="border-t-2 border-gray-200 pt-3 flex items-center gap-x-8 text-sm text-gray-700">
+            <div class="flex-1 flex items-start gap-x-3">
+              <i class="fas fa-globe text-2xl text-blue-800 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-800">Global e-commerce sales to hit $8.1T by 2026;</span> UX is a primary differentiator for capturing market share.
+              </div>
+            </div>
+            <div class="flex-1 flex items-start gap-x-3">
+              <i class="fas fa-exclamation-triangle text-2xl text-red-600 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-800">Poor UX costs businesses $4.6T annually</span> in lost sales. Spartacus mitigates key UX pain points to reduce this loss.
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 17">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white overflow-hidden">
+    <!-- Decorative Background Element -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600 opacity-10 -z-0 -mr-40 -mt-40 transform rotate-45"></div>
+
+    <main class="p-12 w-full h-full relative z-10">
+      <!-- Title: Adjusted to handle wrapping if necessary while keeping within safe area -->
+      <h1 class="text-[35px] font-bold mb-3 text-gray-800" style="padding-top: 12px; margin-bottom: 12px;">
+        Checkout Flow Simplification
+      </h1>
+      
+      <!-- Explanatory Comment Box -->
+      <div class="border-l-4 border-blue-600 bg-blue-50 p-4 mb-6">
+        <p class="text-gray-700 text-base">
+          This slide outlines how Spartacus streamlines the checkout process to reduce cart abandonment and boost conversions through key feature implementation.
+        </p>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex space-x-6 h-[calc(100%-140px)]">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col space-y-6">
+          
+          <!-- Why Simplify? -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Why Simplify Checkout?</h2>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <i class="fas fa-cart-arrow-down text-2xl text-red-600 w-8 text-center flex-shrink-0 mt-1"></i>
+                <div class="ml-3">
+                  <h3 class="font-semibold text-gray-800">Curb Soaring Cart Abandonment Rates</h3>
+                  <p class="text-gray-600 text-sm">Complex and lengthy checkout processes are the primary pain point for online shoppers, leading to significant revenue loss.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-rocket text-2xl text-blue-600 w-8 text-center flex-shrink-0 mt-1"></i>
+                <div class="ml-3">
+                  <h3 class="font-semibold text-gray-800">Boost Conversion & Revenue</h3>
+                  <p class="text-gray-600 text-sm">A frictionless experience directly impacts conversion rates. Every simplification is an opportunity for growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Area -->
+          <div class="flex-grow flex flex-col max-h-[400px]">
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Impact Analysis: Cart Abandonment</h2>
+            <div id="abandonmentChart" class="w-full flex-grow"></div>
+            <p class="text-center text-sm text-gray-500 mt-1 italic">
+              Analysis: Implementing Spartacus's simplified checkout can drastically reduce abandonment by over 50%.
+            </p>
+          </div>
+
+          <!-- Tip Box -->
+          <div class="mt-auto">
+            <div class="bg-blue-50 border-t-4 border-blue-800 p-4 rounded-b-lg">
+              <h3 class="font-bold text-blue-800 flex items-center">
+                <i class="fas fa-lightbulb mr-2"></i>
+                Tip: Build Trust
+              </h3>
+              <p class="text-gray-700 text-sm mt-1">Prioritize minimal fields and make trust signals (e.g., SSL badges, accepted payment logos) constantly visible to reassure users.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col space-y-6">
+
+          <!-- Spartacus Features for Optimization (Stepper) -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-4">Spartacus Features for Optimization</h2>
+            <div class="relative pl-8 space-y-6 border-l-2 border-blue-200">
+              <!-- Step 1 -->
+              <div class="relative">
+                <div class="absolute -left-[1.5rem] top-1 w-8 h-8 bg-blue-600 rounded-full text-white flex items-center justify-center">
+                  <i class="fas fa-user-slash"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800">1. Guest Checkout</h3>
+                <p class="text-gray-600 text-sm">Eliminates the friction of mandatory account creation, a major deterrent for new customers.</p>
+              </div>
+              <!-- Step 2 -->
+              <div class="relative">
+                <div class="absolute -left-[1.5rem] top-1 w-8 h-8 bg-blue-600 rounded-full text-white flex items-center justify-center">
+                  <i class="fas fa-shoe-prints -rotate-90"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800">2. Progress Indicators</h3>
+                <p class="text-gray-600 text-sm">Provides a clear, visual roadmap of the checkout steps (e.g., Shipping → Payment → Review), managing user expectations.</p>
+              </div>
+              <!-- Step 3 -->
+              <div class="relative">
+                <div class="absolute -left-[1.5rem] top-1 w-8 h-8 bg-blue-600 rounded-full text-white flex items-center justify-center">
+                  <i class="fas fa-magic-wand-sparkles"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800">3. Auto-Fill & Address Validation</h3>
+                <p class="text-gray-600 text-sm">Leverages browser/API data to reduce manual input, minimizing errors and speeding up form completion.</p>
+              </div>
+              <!-- Step 4 -->
+               <div class="relative">
+                <div class="absolute -left-[1.5rem] top-1 w-8 h-8 bg-blue-600 rounded-full text-white flex items-center justify-center">
+                  <i class="fas fa-file-lines"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800">4. One-Page Checkout Option</h3>
+                <p class="text-gray-600 text-sm">Condenses all necessary fields into a single, efficient view for users who prefer a faster completion path.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Benefits -->
+          <div class="flex-grow">
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Key Benefits</h2>
+            <div class="space-y-3">
+              <div class="flex items-start p-2 rounded-md">
+                <i class="fas fa-check-circle text-blue-600 text-lg mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Higher Conversions</h4>
+                  <p class="text-gray-600 text-sm">Streamlined steps directly reduce drop-offs at the most critical stage of the user journey.</p>
+                </div>
+              </div>
+              <div class="flex items-start p-2 rounded-md">
+                <i class="fas fa-check-circle text-blue-600 text-lg mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Mobile-Friendly</h4>
+                  <p class="text-gray-600 text-sm">The responsive, lean design ensures a consistent and easy-to-use checkout experience on any device.</p>
+                </div>
+              </div>
+              <div class="flex items-start p-2 rounded-md">
+                <i class="fas fa-check-circle text-blue-600 text-lg mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Scalable & Adaptable</h4>
+                  <p class="text-gray-600 text-sm">The architecture adapts to evolving business needs, allowing for custom steps or integrations seamlessly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    var chartDom = document.getElementById('abandonmentChart');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['Complex Checkout', 'Spartacus Simplified'],
+          axisTick: {
+            alignWithLabel: true
+          },
+          axisLabel: {
+            color: '#1f2937' // text-gray-800
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Abandonment Rate (%)',
+          nameTextStyle: {
+            color: '#1f2937',
+            fontWeight: 'bold'
+          },
+          axisLabel: {
+            color: '#1f2937' // text-gray-800
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'Abandonment Rate',
+          type: 'bar',
+          barWidth: '40%',
+          label: {
+            show: true,
+            position: 'top',
+            formatter: '{c}%',
+            color: '#1f2937',
+            fontWeight: 'bold'
+          },
+          data: [
+            {
+              value: 69,
+              itemStyle: {
+                color: '#dc2626' // red-600
+              }
+            },
+            {
+              value: 28,
+              itemStyle: {
+                color: '#2563eb' // blue-600
+              }
+            }
+          ]
+        }
+      ]
+    };
+    
+    option && myChart.setOption(option);
+  </script>
+</section>
+
+<section class="slide" aria-label="Slide 18">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800 shrink-0">
+        Personalization Strategies
+      </h1>
+      
+      <!-- Explanatory note below the title -->
+      <div class="relative mb-6 p-3 border-l-4 border-blue-600 bg-blue-50 text-gray-800 shrink-0" style="padding-left: 1rem; margin-bottom: 1.5rem;">
+          <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2">
+              <i class="fa-solid fa-circle-info text-xl text-blue-600 bg-white rounded-full"></i>
+          </div>
+          <p class="ml-4 text-base">
+              This slide outlines key personalization features in Spartacus, from dynamic content and AI recommendations to customized UIs and checkout flows, all enabled by its headless architecture.
+          </p>
+      </div>
+
+      <!-- Main content area -->
+      <div class="flex-grow flex gap-x-12">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col justify-start gap-y-8">
+            
+            <!-- 1. Dynamic Content Rendering -->
+            <div>
+                <h2 class="text-2xl font-bold text-blue-600 mb-3 flex items-center">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold mr-4 text-xl">1</span>
+                    Dynamic Content Rendering
+                </h2>
+                <div class="pl-[64px] space-y-3 text-gray-800 text-base">
+                    <div class="flex items-start">
+                        <i class="fas fa-cogs mt-1.5 mr-4 text-blue-800 w-5 text-center"></i>
+                        <p><strong class="font-semibold">Leverages SAP Commerce Cloud smartEdit</strong> for context-aware content.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-bullseye mt-1.5 mr-4 text-blue-800 w-5 text-center"></i>
+                        <p><strong class="font-semibold">Displays banners/products</strong> based on user behavior (e.g., past purchases).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Behavior-Driven Recommendations -->
+            <div>
+                <h2 class="text-2xl font-bold text-blue-600 mb-3 flex items-center">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold mr-4 text-xl">2</span>
+                    Behavior-Driven Recommendations
+                </h2>
+                <div class="pl-[64px] space-y-3 text-gray-800 text-base">
+                    <div class="flex items-start">
+                        <i class="fas fa-robot mt-1.5 mr-4 text-blue-800 w-5 text-center"></i>
+                        <p>Integrates with <strong class="font-semibold">ML-powered recommendation engines</strong>.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-lightbulb mt-1.5 mr-4 text-blue-800 w-5 text-center"></i>
+                        <p>Suggests <strong class="font-semibold">cross-sell/upsell items</strong> via Angular-driven UI components.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Edge -->
+            <div class="mt-auto">
+              <h2 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                  <i class="fas fa-bolt text-blue-600 mr-3 text-2xl"></i>
+                  Technical Edge
+              </h2>
+              <div class="space-y-4 text-gray-800 text-base">
+                  <div class="flex items-center">
+                      <i class="fas fa-code-branch text-blue-800 w-6 text-center mr-4"></i>
+                      <div>
+                          <h3 class="font-semibold">Headless Architecture</h3>
+                          <p class="text-sm text-gray-600">Enables real-time personalization and agile frontend development.</p>
+                      </div>
+                  </div>
+                  <div class="flex items-center">
+                      <i class="fas fa-puzzle-piece text-blue-800 w-6 text-center mr-4"></i>
+                      <div>
+                          <h3 class="font-semibold">Open-Source SDK</h3>
+                          <p class="text-sm text-gray-600">Allows for custom rule extensions and deep integration.</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col justify-start gap-y-8">
+          
+            <!-- 3. Segment-Specific UI Customization -->
+            <div>
+                <h2 class="text-2xl font-bold text-blue-600 mb-3 flex items-center">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold mr-4 text-xl">3</span>
+                    Segment-Specific UI Customization
+                </h2>
+                <div class="pl-[64px] space-y-3 text-gray-800 text-base">
+                    <p class="mb-2">Rules-based UI adaptations for:</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-globe-americas w-6 text-center text-blue-800 mr-4"></i>
+                        <p><strong class="font-semibold">Geography:</strong> e.g., localized promotions and currency.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-users w-6 text-center text-blue-800 mr-4"></i>
+                        <p><strong class="font-semibold">User Role:</strong> e.g., tailored UI for B2B vs. B2C users.</p>
+                    </div>
+                    <div class="flex items-center mt-3">
+                        <span class="text-blue-800 font-bold mr-3">A/B Testing Support:</span>
+                        <span class="inline-block bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">OPTIMIZATION-READY</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Personalized Checkout Flows -->
+            <div>
+                <h2 class="text-2xl font-bold text-blue-600 mb-3 flex items-center">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold mr-4 text-xl">4</span>
+                    Personalized Checkout Flows
+                </h2>
+                <div class="pl-[64px] space-y-3 text-gray-800 text-base">
+                    <div class="flex items-start">
+                        <i class="fas fa-save mt-1.5 mr-4 text-blue-800 w-5 text-center"></i>
+                        <p><strong class="font-semibold">Auto-fills saved preferences</strong> (payment/shipping).</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-tasks mt-1.5 mr-4 text-blue-800 w-5 text-center"></i>
+                        <p><strong class="font-semibold">Adaptive forms</strong> hide irrelevant fields dynamically.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="relative mt-auto">
+              <i class="fas fa-quote-left text-7xl text-gray-200 absolute -top-4 -left-4 -z-10"></i>
+              <blockquote class="text-gray-800 text-lg italic p-4 border-l-4 border-red-600">
+                "Spartacus turns generic storefronts into intuitive shopping journeys."
+              </blockquote>
+            </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 19">
+<div class="w-[1280px] h-[720px] mx-auto relative bg-gradient-to-b from-blue-400 to-blue-600">
+   <!-- Background layer -->
+   <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-blue-100 opacity-20">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-800 to-transparent">
+    </div>
+    <div class="absolute top-10 right-10">
+     <i class="fas fa-tachometer-alt text-blue-300 text-8xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-10 left-10">
+     <i class="fas fa-sitemap text-blue-300 text-6xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute top-1/3 left-10">
+     <i class="fas fa-code text-blue-200 text-7xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-1/4 right-20">
+     <i class="fas fa-chart-line text-blue-300 text-6xl opacity-70">
+     </i>
+    </div>
+   </div>
+   <!-- Text layer -->
+   <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <h1 class="text-5xl font-bold text-white text-center mb-4 drop-shadow-lg">
+     Performance & SEO Considerations
+    </h1>
+    <p class="text-2xl text-white text-center max-w-2xl drop-shadow-md">
+     Optimizing Spartacus for speed, visibility, and search engine ranking.
+    </p>
+    <div class="mt-8 flex gap-8">
+     <i class="fas fa-rocket text-white text-3xl">
+     </i>
+     <i class="fas fa-magnifying-glass text-white text-3xl">
+     </i>
+     <i class="fas fa-cogs text-white text-3xl">
+     </i>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 20">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col">
+      <h1 class="text-[35px] font-bold mb-2 h-10 flex items-end text-gray-800">
+        Speed Optimization Tips
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="mb-3 flex items-center text-gray-600 bg-blue-50 p-3 rounded-md border-l-4 border-blue-600">
+        <i class="fas fa-info-circle text-blue-600 mr-3 text-xl"></i>
+        <p>This slide outlines critical optimization strategies to enhance the performance and SEO ranking of a Spartacus-based e-commerce site.</p>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="flex-grow grid grid-cols-2 gap-x-6">
+
+        <!-- Left Column -->
+        <div class="flex flex-col gap-y-3">
+          
+          <!-- Why Speed Matters -->
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3">Why Speed Matters</h2>
+            <div class="flex flex-col gap-y-3">
+              <div class="flex items-center gap-x-3">
+                <i class="fas fa-users-slash text-5xl text-red-600 w-16 text-center"></i>
+                <div>
+                  <p class="text-3xl font-bold text-red-600">40% of visitors lost</p>
+                  <p class="text-gray-800">after a 3-second loading delay (Google Research).</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-x-3">
+                <i class="fas fa-chart-line text-5xl text-red-600 w-16 text-center transform -scale-x-100"></i>
+                <div>
+                  <p class="text-3xl font-bold text-red-600">7% conversion drop</p>
+                  <p class="text-gray-800">for every 1-second delay in page response.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-x-3 mt-1">
+                <i class="fas fa-ranking-star text-5xl text-blue-600 w-16 text-center"></i>
+                <div>
+                  <h3 class="font-bold text-gray-800">Core Web Vitals & SEO</h3>
+                  <p class="text-gray-600">Key metrics (LCP, FID, CLS) directly impact search rankings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Spacer to push bottom content down -->
+          <div class="flex-grow"></div>
+
+          <!-- Key Techniques -->
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3">Key Techniques for Spartacus UI</h2>
+            <div class="grid grid-cols-2 gap-x-3">
+              <div>
+                <h3 class="font-bold text-blue-800 flex items-center gap-x-2"><i class="fas fa-rocket"></i> Frontend Optimizations</h3>
+                <ul class="mt-2 space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start gap-x-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i><span><strong>Lazy Loading:</strong> Delay non-critical resources.</span></li>
+                  <li class="flex items-start gap-x-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i><span><strong>Image Compression:</strong> Use WebP/AVIF formats.</span></li>
+                  <li class="flex items-start gap-x-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i><span><strong>CDN Integration:</strong> Distribute assets globally.</span></li>
+                </ul>
+              </div>
+              <div>
+                 <h3 class="font-bold text-blue-800 flex items-center gap-x-2"><i class="fas fa-bolt"></i> Performance Best Practices</h3>
+                 <ul class="mt-2 space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start gap-x-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i><span><strong>Minify CSS/JS:</strong> Built-in Spartacus support.</span></li>
+                  <li class="flex items-start gap-x-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i><span><strong>Reduce Redirects:</strong> Eliminate 301/302 chains.</span></li>
+                  <li class="flex items-start gap-x-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i><span><strong>Async/Defer Scripts:</strong> Optimize render path.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex flex-col gap-y-3">
+
+          <!-- Spartacus-Specific Tips -->
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-cogs mr-2 text-blue-800"></i>Spartacus-Specific Tips</h2>
+             <div class="space-y-3">
+                <div class="flex items-start gap-x-3">
+                    <i class="fa-solid fa-code text-blue-600 text-xl w-8 text-center mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Avoid Heavy Liquid Loops</h3>
+                        <p class="text-sm text-gray-600">Optimize Angular templates for faster component rendering.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-x-3">
+                    <i class="fa-solid fa-eye text-blue-600 text-xl w-8 text-center mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Enable Quick-View</h3>
+                        <p class="text-sm text-gray-600">Reduce full page reloads on category and search result pages.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-x-3">
+                    <i class="fa-solid fa-tags text-blue-600 text-xl w-8 text-center mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Consolidate Tag Manager</h3>
+                        <p class="text-sm text-gray-600">Group tracking scripts efficiently via GTM to reduce requests.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Tools for Validation -->
+          <div class="mt-1">
+            <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-tools mr-2 text-blue-800"></i>Tools for Validation</h2>
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-b-2 border-gray-300">
+                  <th class="p-2 font-semibold text-gray-800 w-1/3">Tool</th>
+                  <th class="p-2 font-semibold text-gray-800">Primary Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-200">
+                  <td class="p-2 flex items-center gap-x-2 font-medium text-gray-800"><i class="fab fa-chrome text-lg text-blue-600"></i>Lighthouse</td>
+                  <td class="p-2 text-gray-600">In-browser performance & PWA audits (Chrome DevTools).</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="p-2 flex items-center gap-x-2 font-medium text-gray-800"><i class="fab fa-google text-lg text-blue-600"></i>PageSpeed Insights</td>
+                  <td class="p-2 text-gray-600">Field and lab data with actionable recommendations.</td>
+                </tr>
+                <tr>
+                  <td class="p-2 flex items-center gap-x-2 font-medium text-gray-800"><i class="fas fa-flask-vial text-lg text-blue-600"></i>WebPageTest</td>
+                  <td class="p-2 text-gray-600">Advanced metrics, filmstrips, and waterfall analysis.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Spacer to push bottom content down -->
+          <div class="flex-grow"></div>
+          
+          <!-- Quote -->
+          <blockquote class="border-l-4 border-blue-600 bg-gray-50 p-4 mt-2">
+            <p class="text-gray-800 italic">“Speed is a feature. If your app is slow, users won’t stay to see the rest.”</p>
+          </blockquote>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 21">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col">
+      <h1 class="text-[35px] font-bold mb-4 text-gray-800" style="padding-top: 12px; margin-bottom: 12px;">
+        Media & Alt Text Management
+      </h1>
+      
+      <!-- Explanatory Annotation Box -->
+      <div class="relative bg-blue-50 border-l-4 border-blue-600 p-4 mb-3">
+        <i class="fa-solid fa-circle-info text-blue-600 absolute top-4 left-[-10px] bg-white rounded-full"></i>
+        <p class="ml-4 text-gray-800 text-base">
+          This slide details the critical role of media and alt text in Spartacus UIs, covering SEO benefits, accessibility mandates, and implementation best practices for a robust e-commerce experience.
+        </p>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-grow flex space-x-3">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col space-y-3">
+          
+          <!-- Why Alt Text Matters -->
+          <div class="flex-1">
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Why Alt Text Matters for E-Commerce</h2>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3">
+                <div class="flex items-center mb-1">
+                  <i class="fas fa-magnifying-glass-chart fa-lg w-8 text-blue-600"></i>
+                  <h3 class="font-semibold text-gray-800">SEO Boost</h3>
+                </div>
+                <p class="text-sm text-gray-600 ml-8">Descriptive alt text improves search engine rankings by providing context to crawlers.</p>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center mb-1">
+                  <i class="fas fa-universal-access fa-lg w-8 text-blue-600"></i>
+                  <h3 class="font-semibold text-gray-800">Accessibility</h3>
+                </div>
+                <p class="text-sm text-gray-600 ml-8">Ensures visually impaired users understand images via screen readers.</p>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center mb-1">
+                  <i class="fas fa-face-smile-beam fa-lg w-8 text-blue-600"></i>
+                  <h3 class="font-semibold text-gray-800">User Experience</h3>
+                </div>
+                <p class="text-sm text-gray-600 ml-8">Clarifies image purpose when loading fails or for slow connections.</p>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center mb-1">
+                  <i class="fas fa-key fa-lg w-8 text-blue-600"></i>
+                  <h3 class="font-semibold text-gray-800">Keyword Optimization</h3>
+                </div>
+                <p class="text-sm text-gray-600 ml-8">Expands opportunities to target relevant search queries.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Implementation -->
+          <div class="flex-1">
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Technical Implementation</h2>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <i class="fas fa-cogs fa-lg w-8 mt-1 text-blue-600"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Spartacus CMS Integration</h3>
+                  <p class="text-sm text-gray-600">Automate alt text generation for product images via catalog metadata.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-spinner fa-lg w-8 mt-1 text-blue-600"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Lazy Loading Compatibility</h3>
+                  <p class="text-sm text-gray-600">Ensure alt text remains accessible even with deferred image loading.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quote -->
+          <div class="relative mt-auto">
+             <blockquote class="border-l-4 border-blue-600 pl-8 py-3 bg-gray-50">
+               <i class="fas fa-quote-left text-2xl text-blue-200 absolute left-2 top-3 -z-1"></i>
+               <p class="text-gray-800 italic">"Alt text is a bridge between visual content and searchability—optimize it to drive both traffic and inclusivity."</p>
+             </blockquote>
+          </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col space-y-3">
+          
+          <!-- Best Practices -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Best Practices for Spartacus UI</h2>
+            <ol class="space-y-3">
+              <li class="flex items-start">
+                <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white font-bold mr-3">1</div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Be Specific</h3>
+                  <p class="text-sm text-gray-600">Use concise, accurate descriptions (e.g., "Red Nike Air Max running shoes" instead of "shoes").</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-red-600 text-white font-bold mr-3">2</div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Avoid Keyword Stuffing</h3>
+                  <p class="text-sm text-gray-600">Prioritize natural language over forced keyword repetition.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white font-bold mr-3">3</div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Include Product Attributes</h3>
+                  <p class="text-sm text-gray-600">Integrate brand, color, size, or material (e.g., "Adidas Ultraboost 22 in Midnight Blue").</p>
+                </div>
+              </li>
+               <li class="flex items-start">
+                <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-red-600 text-white font-bold mr-3">4</div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Skip Redundant Phrases</h3>
+                  <p class="text-sm text-gray-600">Omit "image of" or "picture of"—screen readers announce it automatically.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Chart & Analysis -->
+          <div class="flex-1 flex flex-col mt-auto">
+             <h3 class="text-lg font-bold text-blue-800 mb-1">Chart: Alt Text Quality Impact Analysis</h3>
+             <div id="altTextChart" class="w-full" style="height: 200px; max-h: 400px;"></div>
+             <p class="text-sm text-gray-600 mt-1"><b class="text-gray-800">Analysis:</b> The chart demonstrates a strong correlation between the quality of alt text and performance metrics. Moving from no alt text to descriptive, optimized text significantly boosts both SEO ranking potential and accessibility compliance, highlighting its dual value.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // This script initializes the ECharts instance for the alt text impact chart.
+    var chartDom = document.getElementById('altTextChart');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['SEO Score', 'Accessibility Score'],
+        top: 0,
+        textStyle: {
+          color: '#1f2937'
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        data: ['None', 'Generic', 'Descriptive', 'Optimized'],
+        axisLabel: {
+            color: '#1f2937'
+        }
+      },
+      yAxis: {
+        type: 'value',
+        name: 'Score (0-100)',
+        axisLabel: {
+            color: '#1f2937'
+        },
+        nameTextStyle: {
+            color: '#1f2937'
+        }
+      },
+      series: [
+        {
+          name: 'SEO Score',
+          type: 'bar',
+          data: [20, 45, 75, 95],
+          itemStyle: {
+            color: '#2563eb' // Primary color
+          }
+        },
+        {
+          name: 'Accessibility Score',
+          type: 'bar',
+          data: [10, 30, 90, 100],
+          itemStyle: {
+            color: '#1e40af' // Secondary color
+          }
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+  </script>
+</section>
+
+<section class="slide" aria-label="Slide 22">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Main content area with padding -->
+    <main class="p-12 w-full h-full flex flex-col">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-4 h-10 flex items-end text-gray-800">
+        Internal Linking Strategy
+      </h1>
+
+      <!-- Annotation Box below title -->
+      <div class="relative z-0 mt-2 mb-4">
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <i class="fa-solid fa-circle-info text-blue-600 text-xl"></i>
+            </div>
+            <div class="ml-3">
+              <p class="text-base text-blue-800">
+                This slide outlines the importance and best practices of an internal linking strategy for e-commerce, a critical component for enhancing both user experience and SEO performance within a Spartacus-based UI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Main Content Grid -->
+      <div class="flex-grow flex flex-row gap-x-12 mt-3">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col">
+          <div class="flex-grow">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">
+              <i class="fa-solid fa-lightbulb mr-2 text-blue-800"></i>Why It Matters for E-Commerce
+            </h2>
+            
+            <!-- Enhances UX Section -->
+            <div class="mb-8">
+              <div class="flex items-center">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600">
+                  <i class="fa-solid fa-users text-white text-lg"></i>
+                </span>
+                <h3 class="ml-3 text-xl font-semibold text-gray-800">Enhances UX</h3>
+              </div>
+              <p class="mt-2 ml-[44px] text-gray-800">Guides visitors to relevant products and pages, creating a seamless journey that reduces bounce rates.</p>
+              <div class="mt-3 ml-[44px]">
+                <label class="text-sm font-medium text-gray-800">User Engagement &amp; Bounce Rate</label>
+                <div class="flex items-center mt-1">
+                  <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                  </div>
+                  <span class="ml-3 text-sm font-bold text-blue-600">High</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Boosts SEO Section -->
+            <div>
+              <div class="flex items-center">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600">
+                  <i class="fa-solid fa-magnifying-glass-chart text-white text-lg"></i>
+                </span>
+                <h3 class="ml-3 text-xl font-semibold text-gray-800">Boosts SEO</h3>
+              </div>
+              <p class="mt-2 ml-[44px] text-gray-800">Distributes page authority (link equity) and helps search engines crawl and index site content more effectively.</p>
+              <div class="mt-3 ml-[44px] flex items-center justify-between text-center text-sm text-gray-800">
+                  <div class="flex flex-col items-center">
+                      <i class="fa-solid fa-file-powerpoint text-3xl text-blue-800"></i>
+                      <span>Home Page</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-right-long text-gray-400 text-2xl mx-2"></i>
+                  <div class="flex flex-col items-center">
+                      <i class="fa-solid fa-folder-open text-3xl text-blue-600"></i>
+                      <span>Category</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-right-long text-gray-400 text-2xl mx-2"></i>
+                  <div class="flex flex-col items-center">
+                      <i class="fa-solid fa-tag text-3xl text-blue-600"></i>
+                      <span>Product</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quote at the bottom -->
+          <div class="mt-auto">
+            <blockquote class="relative z-0 border-l-4 border-blue-800 pl-8 pr-4 py-3 text-gray-800 italic text-lg bg-gray-50 rounded-r-md">
+              <i class="fas fa-quote-left absolute -left-1 top-2 text-3xl text-blue-200"></i>
+              "Internal links act as a roadmap for users and search engines."
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col">
+          <h2 class="text-2xl font-bold text-blue-800 mb-6">
+            <i class="fa-solid fa-clipboard-list mr-2 text-blue-800"></i>Best Practices (Williams Sonoma Case Study)
+          </h2>
+          <div class="space-y-3">
+              <!-- Step 1 -->
+              <div class="flex items-start">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-white font-bold text-lg flex-shrink-0">1</div>
+                  <div class="ml-4">
+                      <h4 class="font-bold text-lg text-gray-800">Hierarchical Structure</h4>
+                      <p class="text-gray-800">Link from category pages to subcategories &rarr; product pages (e.g., "Cookware" &rarr; "Pots & Pans").</p>
+                  </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="flex items-start">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-white font-bold text-lg flex-shrink-0">2</div>
+                  <div class="ml-4">
+                      <h4 class="font-bold text-lg text-gray-800">Contextual Anchors</h4>
+                      <p class="text-gray-800">Use descriptive anchor text. <br/><span class="text-blue-600 font-semibold"><i class="fa-solid fa-check mr-1"></i> "Stainless Steel Mixing Bowls"</span> vs. <span class="text-red-600"><i class="fa-solid fa-times mr-1"></i> "Click here"</span>.</p>
+                  </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="flex items-start">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-white font-bold text-lg flex-shrink-0">3</div>
+                  <div class="ml-4">
+                      <h4 class="font-bold text-lg text-gray-800">Cross-Linking Related Products</h4>
+                      <p class="text-gray-800">Suggest complementary items to increase Average Order Value (AOV), e.g., link "Coffee Maker" to "Coffee Beans".</p>
+                  </div>
+              </div>
+              <!-- Step 4 -->
+              <div class="flex items-start">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-white font-bold text-lg flex-shrink-0">4</div>
+                  <div class="ml-4">
+                      <h4 class="font-bold text-lg text-gray-800">Footer/Navigation Links</h4>
+                      <p class="text-gray-800">Highlight high-priority pages (Returns, FAQ, Contact Us) to aid user navigation and pass authority.</p>
+                  </div>
+              </div>
+              <!-- Step 5 -->
+              <div class="flex items-start">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-white font-bold text-lg flex-shrink-0">5</div>
+                  <div class="ml-4">
+                      <h4 class="font-bold text-lg text-gray-800">Dynamic Links in CMS</h4>
+                      <p class="text-gray-800">Leverage Spartacus CMS capabilities to auto-generate links like "Customers also viewed" or "Related products".</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 23">
+<div class="w-[1280px] h-[720px] mx-auto relative bg-gradient-to-b from-blue-500 to-blue-700">
+   <!-- Background layer -->
+   <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-blue-200 opacity-40">
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-800 to-transparent">
+    </div>
+    <div class="absolute top-10 right-10">
+     <i class="fas fa-rocket text-red-400 text-8xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-10 left-10">
+     <i class="fas fa-flag-checkered text-gray-400 text-6xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute top-1/3 left-10">
+     <i class="fas fa-chart-line text-blue-300 text-7xl opacity-70">
+     </i>
+    </div>
+    <div class="absolute bottom-1/4 right-20">
+     <i class="fas fa-microchip text-blue-400 text-6xl opacity-70">
+     </i>
+    </div>
+   </div>
+   <!-- Text layer -->
+   <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <h1 class="text-5xl font-bold text-white text-center mb-4 drop-shadow-lg">
+     Future Trends &amp; Conclusion
+    </h1>
+    <p class="text-2xl text-white text-center max-w-2xl drop-shadow-md">
+     Wrapping up and looking towards the future of headless e-commerce.
+    </p>
+    <div class="mt-8 flex gap-4">
+     <i class="fas fa-lightbulb text-red-600 text-3xl animate-pulse">
+     </i>
+     <i class="fas fa-rocket text-white text-3xl">
+     </i>
+     <i class="fas fa-lightbulb text-red-600 text-3xl animate-pulse">
+     </i>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 24">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <!-- Main content area with padding -->
+    <main class="p-12 w-full h-full">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-2 h-10 flex items-end text-gray-800">
+        Headless Commerce Evolution
+      </h1>
+
+      <!-- Explanatory note below the title -->
+      <div class="relative pl-8 text-gray-600 text-base border-l-4 border-blue-600 bg-gray-50 py-3 mb-8">
+        <i class="fas fa-info-circle text-blue-600 absolute left-2 top-4"></i>
+        <span>This slide outlines the key drivers, current state, and future trajectory of headless commerce, focusing on SAP Spartacus's role in this evolution.</span>
+      </div>
+
+      <!-- Main content container with two columns -->
+      <div class="flex gap-8 w-full">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col space-y-8">
+          
+          <!-- Section 1: Key Drivers of Adoption -->
+          <div class="flex flex-col space-y-3">
+            <h2 class="text-xl font-bold text-gray-800 flex items-center">
+              <i class="fas fa-rocket w-6 text-blue-600 mr-2"></i>
+              Key Drivers of Adoption
+            </h2>
+            
+            <!-- Driver 1: Business Agility -->
+            <div class="pl-8">
+              <div class="flex items-center justify-between mb-1">
+                <p class="font-semibold text-gray-700">Business Agility</p>
+                <span class="text-sm font-bold text-blue-800">75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">75% of organizations report improved agility with headless commerce.</p>
+            </div>
+
+            <!-- Driver 2: Market Momentum -->
+            <div class="pl-8">
+              <div class="flex items-center justify-between mb-1">
+                <p class="font-semibold text-gray-700">Market Momentum</p>
+                <span class="text-sm font-bold text-blue-800">80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">80% plan to adopt headless solutions within two years.</p>
+            </div>
+
+            <!-- Driver 3: Industry Shift -->
+            <div class="pl-8 flex items-start">
+               <div class="flex flex-col">
+                  <p class="font-semibold text-gray-700">Industry Shift</p>
+                  <p class="text-xs text-gray-500 mt-1">Retail and beyond are transitioning to modular, composable architectures.</p>
+               </div>
+            </div>
+          </div>
+
+          <!-- Section 2: SAP Commerce Cloud & Spartacus -->
+          <div class="flex flex-col space-y-3">
+            <h2 class="text-xl font-bold text-gray-800 flex items-center">
+              <i class="fas fa-cubes w-6 text-blue-600 mr-2"></i>
+              SAP Commerce Cloud & Spartacus
+            </h2>
+            <ul class="pl-8 space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-history text-blue-800 mr-3 mt-1"></i>
+                <div>
+                  <span class="font-semibold">Legacy Evolution:</span> Formerly SAP Hybris, now a headless-ready omnichannel platform.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-bolt text-blue-800 mr-3 mt-1"></i>
+                <div>
+                  <span class="font-semibold">Spartacus Advantage:</span> Decoupled frontend enables faster UI updates and future-proofing via an API-first approach.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-exclamation-triangle text-red-600 mr-3 mt-1"></i>
+                <div>
+                  <span class="font-semibold text-red-600">Deprecation Notice:</span> SAP Commerce Cloud 22.x phases out legacy features, prioritizing headless compatibility.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col">
+
+          <!-- Section 3: Future Outlook -->
+          <div class="flex flex-col space-y-3 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 flex items-center">
+              <i class="fas fa-chart-line w-6 text-blue-600 mr-2"></i>
+              Future Outlook
+            </h2>
+            <div class="pl-8 space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-puzzle-piece text-blue-800 text-lg mr-4 mt-1 w-6 text-center"></i>
+                <div>
+                  <h3 class="font-bold text-gray-800">Composable Commerce</h3>
+                  <p class="text-gray-600">Demand for modular, best-of-breed solutions will continue to rise.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-star text-blue-800 text-lg mr-4 mt-1 w-6 text-center"></i>
+                <div>
+                  <h3 class="font-bold text-gray-800">Spartacus Role</h3>
+                  <p class="text-gray-600">Critical for SAP’s ecosystem to compete with Salesforce, Adobe, and custom stacks.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-brain text-blue-800 text-lg mr-4 mt-1 w-6 text-center"></i>
+                <div>
+                  <h3 class="font-bold text-gray-800">Innovation Wave</h3>
+                  <p class="text-gray-600">AI-driven personalization and PWAs will leverage headless architectures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Section 4: Quote -->
+          <div class="mt-auto">
+            <blockquote class="relative text-gray-700 italic border-l-4 border-blue-600 pl-8 py-3">
+              <i class="fas fa-quote-left text-5xl text-gray-200 absolute -top-2 left-0 -z-10"></i>
+              <p class="relative z-10">
+                "Headless commerce is not a trend—it’s the foundation for next-gen digital experiences."
+              </p>
+            </blockquote>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 25">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col text-gray-800">
+      
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-2 h-10 flex items-end text-gray-800">
+        Continuous Improvement
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="border-l-4 border-blue-600 pl-3 mb-6">
+        <p class="text-gray-600 italic">
+          This page outlines the critical role of continuous improvement in a Spartacus-based e-commerce strategy, focusing on driving growth through data-driven adaptation and agile UI enhancements.
+        </p>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-grow flex gap-x-8">
+
+        <!-- Left Column -->
+        <div class="w-1/2 flex flex-col gap-y-6">
+          
+          <!-- Section: Why It Matters -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Why Continuous Improvement Matters</h2>
+            <div class="space-y-3 text-base">
+              <div class="flex items-start">
+                <i class="fas fa-trophy text-blue-600 fa-fw mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold">Competitive Edge</h3>
+                  <p class="text-gray-600">Data-driven businesses consistently outperform peers in customer experience (CX) and conversion rates.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-sync-alt text-blue-600 fa-fw mt-1 mr-3"></i>
+                <div>
+                  <h3 class="font-semibold">Dynamic UI with Spartacus</h3>
+                  <p class="text-gray-600">Spartacus’s decoupled nature enables agile UI updates directly aligned with real-time analytics insights.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section: Market Growth Chart -->
+          <div class="mt-3">
+             <h2 class="text-xl font-bold text-blue-800 mb-2">Evolving Market: Projected Growth</h2>
+             <div id="growthChart"></div>
+             <p class="text-sm text-gray-500 mt-2 text-center">
+                Analysis: A projected 20.3% growth in global e-commerce sales (2020-2022) highlights the necessity for adaptive and optimized digital storefronts to capture market share.
+             </p>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-1/2 flex flex-col gap-y-6">
+
+          <!-- Section: Key Levers for Improvement -->
+          <div>
+            <h2 class="text-xl font-bold text-blue-800 mb-4">Key Levers for Improvement</h2>
+            <div class="space-y-4">
+              <!-- Lever 1 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg mr-4">1</div>
+                <div>
+                  <h3 class="font-semibold text-lg">E-commerce Analytics</h3>
+                  <p class="text-gray-600">Track customer journeys, drop-off points, and conversion funnels to identify UI friction points within the Spartacus-powered storefront.</p>
+                </div>
+              </div>
+              <!-- Lever 2 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg mr-4">2</div>
+                <div>
+                  <h3 class="font-semibold text-lg">A/B Testing</h3>
+                  <p class="text-gray-600">Systematically experiment with Spartacus components, such as cart layouts or checkout flows, to validate UI/UX hypotheses with empirical data.</p>
+                </div>
+              </div>
+              <!-- Lever 3 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg mr-4">3</div>
+                <div>
+                  <h3 class="font-semibold text-lg">Feedback Loops</h3>
+                  <p class="text-gray-600">Integrate qualitative behavioral data (e.g., heatmaps, session recordings) with Spartacus event tracking for a holistic view of user interaction.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Section: Actionable Steps -->
+          <div class="mt-3">
+            <h2 class="text-xl font-bold text-blue-800 mb-3">Actionable Steps</h2>
+            <ul class="space-y-2 text-base">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-600 fa-fw mr-3"></i>
+                <span class="font-semibold">Benchmark performance</span><span class="text-gray-600 ml-1"> against industry KPIs (e.g., bounce rate, avg. order value).</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-600 fa-fw mr-3"></i>
+                <span class="font-semibold">Prioritize UI/UX tweaks</span><span class="text-gray-600 ml-1"> based on quantifiable data and potential impact.</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-600 fa-fw mr-3"></i>
+                <span class="font-semibold">Leverage Spartacus’ modularity</span><span class="text-gray-600 ml-1"> to deploy iterative enhancements without full releases.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Quote -->
+      <div class="mt-auto pt-6">
+        <blockquote class="text-center italic text-gray-700 text-lg border-t border-gray-200 pt-4">
+          <i class="fas fa-quote-left mr-2 text-gray-400"></i>
+          Optimization is not a milestone—it’s a cycle.
+          <i class="fas fa-quote-right ml-2 text-gray-400"></i>
+        </blockquote>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // ECharts initialization script for the growth chart
+    var chartDom = document.getElementById('growthChart');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        },
+        formatter: '{b}: {c}% Growth'
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['2020 (Baseline)', '2022 (Projected)'],
+          axisTick: {
+            alignWithLabel: true
+          },
+          axisLabel: {
+            color: '#1f2937' // text-gray-800
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Growth',
+          axisLabel: {
+            formatter: '{value}%',
+            color: '#1f2937' // text-gray-800
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'Projected Growth',
+          type: 'bar',
+          barWidth: '60%',
+          data: [0, 20.3], // Representing 0% baseline and 20.3% growth
+          itemStyle: {
+            color: '#2563eb' // Primary color: blue-600
+          },
+          label: {
+            show: true,
+            position: 'top',
+            formatter: '+{c}%',
+            color: '#1e40af', // Secondary color: blue-800
+            fontWeight: 'bold'
+          }
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+  </script>
+</section>
+
+<section class="slide" aria-label="Slide 26">
+<div class="w-[1280px] min-h-[720px] mx-auto relative bg-white">
+    <main class="p-12 w-full h-full flex flex-col">
+      <!-- Slide Title -->
+      <h1 class="text-[35px] font-bold mb-2 h-10 flex items-end text-gray-800">
+        Final Takeaways
+      </h1>
+
+      <!-- Annotation Box -->
+      <div class="border-l-4 border-blue-200 pl-4 py-2 mt-2 mb-6 bg-blue-50 text-sm text-gray-700">
+        <p><i class="fas fa-info-circle text-blue-600 mr-2"></i>This slide synthesizes the core advantages and strategic actions for leveraging Spartacus, culminating in a forward-looking perspective on its role in modern e-commerce.</p>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-grow grid grid-cols-2 gap-x-12">
+        
+        <!-- Left Column: Insights & Conclusion -->
+        <div class="flex flex-col justify-between">
+            <!-- Key Insights Section -->
+            <div>
+                <h2 class="text-2xl font-bold text-blue-800 mb-5 flex items-center">
+                    <i class="fas fa-lightbulb mr-3 text-2xl"></i>
+                    Key Insights from Spartacus 4.0+
+                </h2>
+                <div class="space-y-6 pl-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-cogs text-2xl text-blue-600 w-8 text-center"></i>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg text-gray-800">Decoupled Architecture</h3>
+                            <p class="text-gray-600 mt-1">Enables flexible, scalable integrations with SAP CX and third-party systems.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-compass-drafting text-2xl text-blue-600 w-8 text-center"></i>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg text-gray-800">UX-Centric Design</h3>
+                            <p class="text-gray-600 mt-1">Prioritizes seamless shopping experiences through features like Quick Order and Cart Validation.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-layer-group text-2xl text-blue-600 w-8 text-center"></i>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg text-gray-800">Future-Proof Adaptability</h3>
+                            <p class="text-gray-600 mt-1">Modular upgrades (e.g., SAP Digital Payments) ensure long-term competitiveness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Closing Thought Section -->
+            <div class="mt-8">
+                 <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                    <i class="fas fa-bullhorn mr-3 text-2xl"></i>
+                    Closing Thought
+                </h2>
+                 <div class="relative pl-8">
+                     <div class="absolute left-0 top-0 h-full">
+                         <i class="fas fa-quote-left text-5xl text-blue-100 -z-10"></i>
+                     </div>
+                     <blockquote class="text-gray-700 italic text-lg leading-relaxed">
+                        "Spartacus transforms SAP CX into a modern, developer-friendly platform—bridging agility with enterprise-grade commerce."
+                     </blockquote>
+                 </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Strategic Recommendations -->
+        <div class="pt-1">
+            <h2 class="text-2xl font-bold text-blue-800 mb-5 flex items-center">
+                <i class="fas fa-route mr-3 text-2xl"></i>
+                Strategic Recommendations
+            </h2>
+            <div class="relative pl-5">
+                <!-- Vertical connecting line for the stepper -->
+                <div class="absolute left-[29px] top-4 bottom-4 w-0.5 bg-blue-200" style="z-index: 0;"></div>
+                <ol class="space-y-8">
+                    <li class="flex items-start relative z-10">
+                        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-blue-600 text-white font-bold rounded-full mr-6 border-4 border-white">1</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Adopt Progressive Migration</h3>
+                            <p class="text-gray-600 mt-1">Leverage Spartacus 4.x’s backward compatibility for low-risk, incremental updates.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start relative z-10">
+                        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-blue-600 text-white font-bold rounded-full mr-6 border-4 border-white">2</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Focus on Core Features</h3>
+                            <p class="text-gray-600 mt-1">Implement saved cart cloning and seamless payment integrations to boost conversion rates.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start relative z-10">
+                        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-blue-600 text-white font-bold rounded-full mr-6 border-4 border-white">3</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Align with SAP Roadmap</h3>
+                            <p class="text-gray-600 mt-1">Continuously integrate new Spartacus modules and features, such as advanced B2B extensions.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</section>
+</body>
+</html>
